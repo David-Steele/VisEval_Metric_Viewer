@@ -1,0 +1,3583 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="icon" href="../images/tabIconMini.png">
+        <title>VisEval</title>
+        <script data-require="jquery" data-semver="3.2.1" src="../jQuery/jquery-3.2.1.js"></script>
+        <!--<script src="../jQuery/script.js"></script>-->
+        
+        <style>
+            table {
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+            
+            thead {
+				background-color: #ddd;				
+			}
+            
+            th {
+                cursor: pointer;
+            }
+            
+            th, td {
+                text-align: left;
+                padding: 4px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #ddd
+            }
+            
+            h6 {
+                display: inline;
+            }
+            
+        </style>
+        
+        <script>
+                $(window).on('load', (function(){
+                    $("input:checkbox:not(:checked)").each(function() {
+                        var column = "table ." + $(this).attr("name");
+                        $(column).hide();
+                    });
+        
+                    $("input:checkbox").click(function(){
+                        var column = "table ." + $(this).attr("name");
+                    $(column).toggle();
+                    });
+                }));
+        </script>
+        
+        <script type="text/javascript">
+            function sortTable(div1,div2,div3,div4,div5,div6,div7,div8,div9,div10,div11,div12,div13,div14,div15,div16,div17,div18,div19,div20,div21,div22)
+            {
+               d1 = document.getElementById(div1); d5 = document.getElementById(div5);
+               d2 = document.getElementById(div2); d6 = document.getElementById(div6);
+               d3 = document.getElementById(div3); d7 = document.getElementById(div7);
+               d4 = document.getElementById(div4); d8 = document.getElementById(div8);
+               d9 = document.getElementById(div9); d10 = document.getElementById(div10);
+               d11 = document.getElementById(div11); d12 = document.getElementById(div12);
+               d13 = document.getElementById(div13); d14 = document.getElementById(div14);
+               d15 = document.getElementById(div15); d16 = document.getElementById(div16);
+               d17 = document.getElementById(div17); d18 = document.getElementById(div18);
+               d19 = document.getElementById(div19); d20 = document.getElementById(div20);
+               d21 = document.getElementById(div21); d22 = document.getElementById(div22);
+                //try {
+                   d9 = document.getElementById(div9); d10 = document.getElementById(div10);
+                   d9.style.display = "none"; d10.style.display = "none";
+                //}
+                //catch(err) {
+                //console.log(err.message);
+                //}
+               
+               d3.style.display = "none"; d4.style.display = "none"; 
+               d5.style.display = "none"; d6.style.display = "none";
+               d7.style.display = "none"; d8.style.display = "none";
+               
+               d9.style.display = "none"; d10.style.display = "none"; 
+               d11.style.display = "none"; d12.style.display = "none";
+               d13.style.display = "none"; d14.style.display = "none";
+               d15.style.display = "none"; d16.style.display = "none";
+               d17.style.display = "none"; d18.style.display = "none";
+               d19.style.display = "none"; d20.style.display = "none";
+               d21.style.display = "none"; d22.style.display = "none";
+               
+               if( d2.style.display == "none" )
+               {
+                  d1.style.display = "none";
+                  d2.style.display = "block";
+               }
+               else
+               {
+                  d1.style.display = "block";
+                  d2.style.display = "none";
+               }
+            }
+        </script>
+        
+        
+    </head>
+    <body>
+        <div class="centre" id="centreOfBody">
+            <!--<div><a href="../main.html"><img src="../images/banner.png" alt="Sea View" style="width:1732px;height:304px;"></a></div>-->
+            <div><a href="../main.html"><img src="../images/banner.png" alt="Sea View" style="width:100%;margin: 0 auto"></a></div>
+            <div class="main">
+                   <!-- <div id="chboxes">
+                        <input type="checkbox" name="POS" checked />Pos
+                        <input type="checkbox" name="Sentence" checked />Sentence
+                        <input type="checkbox" name="SentenceBleu" checked />Sen Bleu
+                        <input type="checkbox" name="TER" checked />TER
+                        <input type="checkbox" name="WER" checked />WER
+                    </div>-->
+<div id="chboxes">
+<input type="checkbox" name="POS" checked />POS
+<input type="checkbox" name="REF" checked />REF Length
+<input type="checkbox" name="Sentence" checked />Sentence
+<input type="checkbox" name="SentenceBleu" checked />Sen Bleu
+<input type="checkbox" name="BEER" checked />BEER
+<input type="checkbox" name="WER" checked />WER
+<input type="checkbox" name="ed" checked />Edit Dist
+</div>
+<div id="stPos" style="display:block;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stPosRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stSen" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stSenRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stBleu" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stBleuRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stWer" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stWerRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stEd" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stEdRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stTer" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stTerRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMet" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMetRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMtBleu" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMtBleuRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMtNist" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stMtNistRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stRef" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stRefRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stBeer" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stBeerRev" style="display:none;">
+<table id="myTable">
+<thead>
+   <tr>
+      <th class="POS" onclick="sortTable('stPos','stPosRev','stSen','stSenRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">POS</th>
+      <th class="REF" onclick="sortTable('stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev','stBeer','stBeerRev')">REF<br>Length</th>
+      <th class="Sentence" onclick="sortTable('stSen','stSenRev','stPos','stPosRev','stBleu','stBleuRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sentence</th>
+      <th class="SentenceBleu" onclick="sortTable('stBleu','stBleuRev','stSen','stSenRev','stPos','stPosRev','stWer','stWerRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">Sen<br>Bleu</th>
+      <th class="BEER" onclick="sortTable('stBeer','stBeerRev','stRef','stRefRev','stMtNist','stMtNistRev','stMet','stMetRev','stTer','stTerRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stMtBleu','stMtBleuRev')">BEER</th>
+      <th class="WER" onclick="sortTable('stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stEd','stEdRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">WER<br>(Score)</th>
+      <th class="ed" onclick="sortTable('stEd','stEdRev','stWer','stWerRev','stSen','stSenRev','stBleu','stBleuRev','stPos','stPosRev','stTer','stTerRev','stMet','stMetRev','stMtBleu','stMtBleuRev','stMtNist','stMtNistRev','stRef','stRefRev','stBeer','stBeerRev')">E Dist<br>(Score)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="POS" title="POS" id="1">1</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 要 一 件 长袖 套衫 。</h4>
+      <h4>REF: i 'd like a pullover with long sleeves .</h4>
+      <h4>HYP: i 'd like a pullover with long .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7673</h4></td>
+    <td class="BEER" title="BEER"><h4>0.828</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>8<br>(0.8)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="2">2</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(27)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 是 我 个人 用 的 。</h4>
+      <h4>REF: it is for my personal use .</h4>
+      <h4>HYP: it 's for my personal use .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6435</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8265</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>1<br>(0.963)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="3">3</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(38)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 带 我们 去 希尔顿 饭店 。</h4>
+      <h4>REF: take us to the hilton hotel , please .</h4>
+      <h4>HYP: please take us to the hilton hotel .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6452</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>3<br>(0.6667)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>16<br>(0.5789)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="4">4</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(33)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 今年 很 流行 白色 。</h4>
+      <h4>REF: white is very popular this year .</h4>
+      <h4>HYP: these is very popular this year .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8258</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9091)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="5">5</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(28)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 这个 衣服 不 适合 我 。</h4>
+      <h4>REF: this dress does n't fit me .</h4>
+      <h4>HYP: this dress does n't fit for me .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5946</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8257</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>4<br>(0.8571)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="6">6</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(40)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 在 这里 能 买到 我 相机 的 电池 吗 ?</h4>
+      <h4>REF: can i buy batteries for my camera here ?</h4>
+      <h4>HYP: can i get batteries for my camera here ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.6606</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8241</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.925)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="7">7</td>
+    <td class="REF" title="Ref Len" id="9">9<br>(42)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 给 我 男朋友 买 东西 。</h4>
+      <h4>REF: i want to get something for my boyfriend .</h4>
+      <h4>HYP: i want to buy something for my boyfriend .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.5969</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8222</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8889)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>3<br>(0.9286)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="8">8</td>
+    <td class="REF" title="Ref Len" id="7">7<br>(25)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 能 给 我 一 个 浴巾 吗 ?</h4>
+      <h4>REF: may i have a bath towel ?</h4>
+      <h4>HYP: can i have a bath towel ?</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.8091</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8217</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8571)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.92)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="9">9</td>
+    <td class="REF" title="Ref Len" id="13">13<br>(56)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 我 想 用 航空 邮件 发 这个 包裹 到 东京 。</h4>
+      <h4>REF: i 'd like to send this package to tokyo by air courier .</h4>
+      <h4>HYP: i 'd like to send this package to tokyo by airmail .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.7604</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8213</h4></td>
+    <td class="WER" title="WER"><h4>2<br>(0.8462)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>7<br>(0.875)</h4></td>
+</tr>
+  <tr>
+    <td class="POS" title="POS" id="10">10</td>
+    <td class="REF" title="Ref Len" id="6">6<br>(32)</td>
+    <td class="Sentence" title="Sentence">
+      <h4>SRC: 请 填 这些 合同 。</h4>
+      <h4>REF: please fill out these contract .</h4>
+      <h4>HYP: please fill out the contract .</h4>
+<h6><a href="../main.html">HOME</a></h6>&emsp;<h6><a href="#">TOP</a></h6>
+    </td>
+    <td class="SentenceBleu" title="Sen Bleu"><h4>0.3833</h4></td>
+    <td class="BEER" title="BEER"><h4>0.8207</h4></td>
+    <td class="WER" title="WER"><h4>1<br>(0.8333)</h4></td>
+    <td class="ed" title="Edit Dist"><h4>2<br>(0.9375)</h4></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+            </div> <!--end main div-->
+        </div>
+    </body>
+</html>

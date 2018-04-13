@@ -1,0 +1,1001 @@
+src,ref,hyp,bleu,eScore,eDist,wer,werScore,refLen,meteor,ter,mtbleu,mtNistMain,mtNistNorm,beer
+我们 现在 是 往 哪个 方向 ?,in which direction are we heading ?,now are it now we have a direction ?,0.2785,0.2571,26,7,0.0,7,N/A,N/A,N/A,N/A,N/A,0.4838
+费用 会 是 多少 ?,how much will the charge be ?,what will the charge ?,0.2577,0.6552,10,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6172
+我 想 要 个 吊床 。,i 'd like a hammock .,i 'd like a rare .,0.5373,0.7143,6,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.6511
+有 面包 卷 吗 ?,do you have rolls ?,do you have any rolls ?,0.3833,0.7895,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7665
+让 我 看下 这个 。,let me see this .,let me see this .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+你 应该 坐 公共 汽车 去 。,you should take the bus .,you should take a bus .,0.3833,0.88,3,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7529
+这 列 火车 在 华盛顿 停 吗 ?,does this train stop at washington d.c. ?,does this train stop at washington ?,0.729,0.878,5,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8599
+有 什么 问题 吗 ?,is anything wrong ?,any any questions ?,0.1956,0.3684,12,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.3088
+我 的 肩膀 严重 擦伤 。,my shoulder is badly bruised .,my shoulders got home in .,0.2373,0.5333,14,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4238
+我 的 箱子 破 了 。,my suitcase is broken .,my suitcase 's broken .,0.3365,0.9565,1,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7763
+带 我 去 这个 地址 。,take me to this address .,"take me to this address , please .",0.5411,0.64,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7597
+"这个 费用 包括 税 , 服务费 和 早餐 吗 ?","does this price include tax , service charge and breakfast ?",what 's the fare for the charge of this charge and a charge ?,0.1843,0.35,39,11,0.0,11,N/A,N/A,N/A,N/A,N/A,0.3957
+我 马上派 我们 领班 用 万 能 钥匙 把 门 打开 。 你 住 几 号 房间 ?,okay . i 'll send our housekeeper right away to open the door with a master key . what is your room number ?,my parents key is open with the bell change . can i open the car for the master ?,0.1516,0.2963,76,22,0.08333333333333343,24,N/A,N/A,N/A,N/A,N/A,0.3955
+而且 我们 更 喜欢 不 抽烟 的 人 。,and we prefer non-smokers .,and we prefer smoking who rather .,0.2876,0.4815,14,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.5408
+"抱歉 , 先生 。","excuse me , sir .","excuse me , sir .",1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 正在 浏览 。,i 'm just browsing .,i 'm on the only .,0.245,0.45,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.3449
+"我们 吃 的 很 好 , 谢谢 你 。","we enjoyed it , thank you .","we enjoyed it , thank you .",1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+你 什么 意思 ?,what do you mean ?,what do you mean ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 要 从 今天 起 开 使用 英国 铁路 优惠卡 。,i 'll be using my britrail pass from today .,i want to drive the british department today from today .,0.1997,0.2955,31,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.386
+我 想 要 件 灯芯绒 的 。,i 'd like one made of corduroy .,i 'd like a one one .,0.2636,0.5,16,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5325
+那 将 会 花 三 天 时间 。,it 'll take three days .,that will take three days .,0.5081,0.7917,5,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7046
+请 说 你 的 名字 。,and your name please .,"your name , please .",0.3365,0.7273,6,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.7174
+"我 十五 年 前 刚 到 日本 时 就 开始 了 。 他们 的 图案 上面 有 花鸟 , 非常 吸引 人 。",yes . i started it when i first visited japan fifteen years ago . they have flowers and birds in their designs and are so attractive .,"i was been in japan ago to japan do i start at this year 's , but ago ago , very very very years ago .",0.1141,0.306,93,25,0.07407407407407404,27,N/A,N/A,N/A,N/A,N/A,0.3706
+更 不 用 说 国会 大厦 了 。,"needless to say , i 'd like to visit the capitol building , too .",it 's not more than white building .,0.0982,0.3385,43,13,0.13333333333333328,15,N/A,N/A,N/A,N/A,N/A,0.3147
+我 能 看看 支票簿 的 样本 吗 ?,can i see samples of check books ?,"can i see the pizza on pepper , please ?",0.2153,0.3824,21,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3829
+"好 的 , 我 给 你们 再 拿 些 碟子 。","okay , i 'll get you some more plates .","yes , i 'll bring some more order .",0.2567,0.5897,16,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.5323
+需要 帮忙 吗 ?,may i help ?,you need help ?,0.259,0.4167,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.4247
+我 想 吃 顿 总共 花费 少于 五十 美元 的 晚餐 。,i 'd like to have dinner for less than fifty dollars in all .,i 'd like to eat the same than more dollars a meal .,0.206,0.5902,25,7,0.5,14,N/A,N/A,N/A,N/A,N/A,0.4927
+记得 还 车前 要 加满 油 。,remember to fill up with gas before you return it .,there have remember the tank before close it .,0.1784,0.3529,33,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4311
+我 手提箱 的 轮子 坏 了 。,my suitcase 's wheel is broken .,my suitcase has broken .,0.2256,0.7188,9,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6129
+一百五十 美金 四十五 美分 。,your bill comes to one hundred fifty dollars and forty five cents .,the hundred dollar dollars be fifty dollars and forty-five cents .,0.2039,0.5821,28,8,0.3846153846153846,13,N/A,N/A,N/A,N/A,N/A,0.5971
+"如果 可能 , 我们 想 要 一 个 说 日语 的 导游 。",we 'd like to have a guide who speaks japanese if we can .,if we want to get a japanese-speaking guide if we have that speaking guide .,0.2126,0.0862,53,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.4938
+在 希尔顿 饭店 停 吗 ?,do you stop at the hilton hotel ?,do you stop at the hilton hotel ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+把 账单 给 我 拿来 好 吗 ?,can you bring me the bill ?,"will you bring the bill , please ?",0.2943,0.4074,16,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5954
+"我 是 akiko ono , 乔治 的 朋友 。","this is akiko ono , george 's friend .","i 'm akiko ono , george .",0.3267,0.6053,15,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5934
+在 你 的 右 手 边 。,it 's on your right .,right on your right .,0.5475,0.7619,5,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7055
+我 叫 mikako ikeda 。,my name is mikako ikeda .,my name is my family speaking .,0.2876,0.44,14,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4904
+"好 的 , 但是 我 希望 不 会 用 很 长 时间 。",okay . but i hope it will n't take long .,"well , but i hope not much longer .",0.1875,0.5122,20,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.4473
+"那么 , 请 填写 这个 申请表 并 在 上边 签名 。","then , please fill out this application form and sign it .","then , please fill out this card and sign it at the application .",0.4683,0.5345,27,5,0.5833333333333333,12,N/A,N/A,N/A,N/A,N/A,0.7528
+我 想 对方 付费 。,and i want to call collect .,i 'd like to make an collect call .,0.2945,0.2857,20,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.5054
+列车 什么 时候 到 石冢 ?,what time does the train arrive in cairns ?,what time does the train arrive in ?,0.7673,0.8372,7,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.846
+"还 有 在 结婚 典礼 , 授奖 仪式 和 葬礼 时 也 穿 。","and on special occasions such as wedding receptions , award ceremonies or funerals .","and in america are in wedding , and fly and when you come in , too .",0.2624,0.3571,54,15,0.0,14,N/A,N/A,N/A,N/A,N/A,0.3293
+你 给 我 找错 钱 了 。,you did n't give me the right change .,you gave me the wrong change .,0.2337,0.6316,14,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5367
+请来 半瓶 。,"half bottle , please .","half more salad , please .",0.3276,0.6364,8,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5675
+它 附带 使用 说明书 吗 ?,does it come with an instruction sheet ?,does it use a racket this ?,0.1995,0.45,22,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3639
+请 等 汤凉 了 以后 再 喝 。,please drink the soup after you cool it .,please come with a long after you can eat .,0.213,0.5854,17,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4752
+我 的 名字 和 地址 在 上面 。,my name and address are on it .,my name and address is in .,0.3768,0.7742,7,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6678
+好 的 。,okay .,all right .,0.2093,0,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.1716
+拉上 缰绳 。,pull on the reins .,the window 's in a show area .,0.2357,0,23,7,0.0,5,N/A,N/A,N/A,N/A,N/A,0.2759
+我 想 去 a 博物馆 。,i 'd like to go to the a museum .,i would like to go to a a museum .,0.3928,0.7879,7,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.7146
+我 想 要 盘 盒式 录音带 。,i 'd like a cassette tape .,i 'd like a radio for soda .,0.3656,0.5556,12,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5046
+"那么 , 我们 明天 何 不 去 海滩 呢 ?","well then , why do n't we go to the beach tomorrow ?","then , why do n't we go to the beach ?",0.7626,0.7308,14,2,0.8461538461538461,13,N/A,N/A,N/A,N/A,N/A,0.7875
+我 在 转好 。,i 'm getting better .,i 'm on a hurry .,0.245,0.4286,12,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.3324
+你 能 马上 给 我 发行 一 张 替换 卡 吗 ?,could you issue me a replacement card immediately ?,could you reissue my card right away ?,0.2065,0.4902,26,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4653
+地铁站 在 哪 ?,where 's the railway station ?,where is the subway station ?,0.2633,0.8333,5,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6458
+请 稍后 再 试 。,please try again later .,please try again later .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+"好 , 你 真 是 太 好 了 。","well , how nice of you .",okay . this is very kind . you 're so .,0.2308,0,27,9,0.0,7,N/A,N/A,N/A,N/A,N/A,0.2506
+你 想要 什么 型号 的 ?,what kind model do you want ?,what kind of your can you like ?,0.234,0.5172,14,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.4741
+什么 时候 吃 这些 药 ?,when should i take these tablets ?,when do you have any medicine ?,0.2368,0.3824,21,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.2984
+我 想 要 条 项链 。,i 'd like a chain .,i 'd like a necklace .,0.5373,0.6842,6,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.6423
+"那么 , 是 两千五百 美元 一 个 月 。","so , that 's two thousand five hundred dollars monthly .","then , it 'll be two dollars a month .",0.2502,0.3929,34,9,0.18181818181818174,11,N/A,N/A,N/A,N/A,N/A,0.4111
+junji isobe 。,junji isobe .,japanese soup are .,0.1956,0.0769,12,3,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2277
+那 个 湖 有 多 深 ?,how deep is that lake ?,how deep is that lake ?,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+我 怎样 能 打 电话 到 日本 ?,how can i make a telephone call to japan ?,can i call telephone to japan ?,0.2385,0.6667,14,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.6837
+你 愿意 今晚 一起 去 吃 饭 吗 ?,would you like to get together for dinner tomorrow night ?,would you like to have dinner on this meal ?,0.2631,0.5345,27,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.5084
+随后 我 就 会 寄给 你 的 照片 。,i 'd like to send you a photo later .,i 'll send the pictures of your picture .,0.2319,0.2703,27,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.355
+"你 的 姓名 , 航班号 , 和 日期 , 谢谢 。","your name , flight number , and the date , please .","your name , and date , please .",0.3282,0.6078,20,4,0.6666666666666667,12,N/A,N/A,N/A,N/A,N/A,0.6586
+请 叫 我 肯 。,please call me ken .,please call me .,0.3691,0.8,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7834
+给 我 看看 一些 不同 颜色 的 。,show me some others in different colors .,show me some different color in different colors .,0.4317,0.6829,13,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6934
+你 问 过 出租车 公司 吗 ?,did you ask the taxi company about it ?,do you ask you have a taxi ?,0.2065,0.4615,21,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4401
+"和 我 想 的 一样 , 天气 差别 很 大 。","just as i expected , the weather is very different .","for an same thing i like to be very weather , well .",0.2858,0.2885,37,11,0.0,11,N/A,N/A,N/A,N/A,N/A,0.395
+很多 工人 要 花 一 两 个 小时 上下班 。,"many workers commute to their offices , which takes them one to two hours .",there are many hours to spend two hours .,0.1271,0.3333,50,12,0.2,15,N/A,N/A,N/A,N/A,N/A,0.3762
+"在 入境 通道 后面 , 你 会 找到 它 。","after the immigration , you 'll find it .","around the back , and you 'll find it .",0.4273,0.5854,17,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.5802
+喷泉 在 哪 ?,where is the fountain ?,where is the bicycle ?,0.3844,0.6522,8,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6143
+我 现在 没 钱 。,i do n't have money now .,i do n't have any money now .,0.5,0.84,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8097
+是 的 。,yes .,yes .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.8632
+"我 正在 看 , 谢谢 。","i 'm just looking , thanks .","i 'm just looking , thank you .",0.5411,0.8571,4,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7882
+"哦 , 谢谢 , 我 吃 完 了 。","oh , thank you . i enjoyed it .","oh , thank you . i eat it .",0.6606,0.8065,6,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.7552
+"我 的 名字 叫 akio yamada , 飞往 东京 的 日本 航空 公司 零二六 次 航班 。",my name is akio yamada and the flight number is jal zero two six bound for tokyo .,"my name is called yamada , flight two one two for tokyo on the flight .",0.1969,0.4634,44,12,0.3333333333333334,18,N/A,N/A,N/A,N/A,N/A,0.5307
+你们 有 很多 。,you have many .,anything . you 're much .,0.2373,0,17,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.322
+请 把 它 放到 黄色 的 篮子 里 。,please put it in this yellow basket .,please put it on a little in the top .,0.2276,0.5135,18,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.5154
+我们 还 路 要 走 。,we still have a few miles to travel .,we have to leave the way .,0.2116,0.4054,22,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3922
+是 八点 差 五分 。,it 's five minutes to eight .,it 's five to eight .,0.434,0.7241,8,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7283
+这个 是 我 的确 认单 。,this is my confirmation slip .,this is my matter .,0.3147,0.5333,14,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5121
+很 方便 。,it 's convenient .,it 's convenient .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+飞往 大阪 的 二五二 次 航班 有 什么 变动 吗 ?,is there any change in the flight number two five two to osaka ?,is the check-in and flight on flight one o three way to osaka ?,0.183,0.4844,33,9,0.3571428571428571,14,N/A,N/A,N/A,N/A,N/A,0.48
+它们 多少 钱 ? 你 能 给 我 写 个 价格 单 吗 ?,how much are they ? could you write the cost on a piece of paper ?,what is that ? can you give me a price list ?,0.1952,0.4091,39,12,0.25,16,N/A,N/A,N/A,N/A,N/A,0.3213
+我 把 包忘 在 火车 上 了 。,i left my bag on the train .,i left my bag on the train .,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+找错 钱 了 。,this change is wrong .,it 's the wrong change .,0.2626,0.3182,15,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.5525
+它 一 碰 就 痛 。,it hurts when i touch it .,it was a little pain on it .,0.2178,0.3077,18,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3339
+那 个 男人 烂醉如泥 。,that man 's pickled .,that man 's in a period .,0.2876,0.5714,9,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.5523
+那 没有 错 。,there is no mistake .,it 's nothing .,0.1524,0.381,13,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.2805
+在 这个 旅游 里 有 自由 时间 吗 ?,will there be any free time on this tour ?,do you have any free inside this tour ?,0.2452,0.5952,17,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.5187
+"如果 可以 的话 , 我 想 坐 在 靠 出口 的 座位 。","if possible , i would like to sit in the exit seat .","in case , i would like to sit in seat in the exit .",0.5445,0.6346,19,5,0.6153846153846153,13,N/A,N/A,N/A,N/A,N/A,0.7492
+坐 出租车 到 车站 要 花 多 长 时间 ?,how long does it take to get to the station by taxi ?,how long does it take by taxi to the bus stop .,0.3739,0.6226,20,6,0.5384615384615384,13,N/A,N/A,N/A,N/A,N/A,0.67
+请 按 这个 按钮 。,please press this button .,"just push this button , please .",0.2473,0.3462,17,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.5792
+请 记住 我 。,please remember me .,please keep me .,0.2866,0.7,6,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.5339
+"请 问 , 你 能 和 我 一起 来 吗 ?","could you come with me , please ?",would you please ask with me with me ?,0.2356,0.4848,17,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.5977
+我 想 和 唐 预约 在 七月 二号 下午 两点 。,i 'd like to make an appointment with don on july second at two p.m.,i 'd like to make a reservation for two o two p.m. on the second afternoon .,0.2622,0.4559,37,11,0.2666666666666667,15,N/A,N/A,N/A,N/A,N/A,0.5228
+"先生们 , 女士们 , 早上 好 。","good morning , ladies and gentlemen .","gentlemen , gentlemen , all morning morning .",0.2803,0.1081,33,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.4722
+我 可以 离开 这个 地方 吗 ?,may i leave this area ?,may i leave this place ?,0.5373,0.8261,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7368
+请 给 我 拿 副 耳机 。,"i would like headphones , please .","i 'd like a pair of earphones , please .",0.2276,0.5588,15,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.5583
+谢谢 你 这么 远 来 。,thank you for coming such a long way .,thank you for the time .,0.1987,0.4737,20,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4529
+这个 的 邮资 是 多少 钱 ?,how much is the postage on this ?,how much is the postage on this ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+我 睡觉 的 时候 把 脖子 扭了 。,i twisted my neck while i was sleeping .,i got my time to get a neck in my sleep .,0.2724,0.325,27,9,0.0,9,N/A,N/A,N/A,N/A,N/A,0.4006
+"唔 , 我 还 没 决定 。","well , i have n't decided yet .","well , i have n't decided yet .",1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+眉毛 上面 稍微 剪 一点 。,"trim them a little above the eyebrows , please .","just make a little a little more , please .",0.2519,0.5625,21,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.4766
+什么 时候 吃 早餐 ?,what time can i have breakfast ?,when do you have breakfast ?,0.258,0.6562,11,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5278
+救护车 到 这儿 要 多 长 时间 ?,how long will it take for an ambulance to arrive here ?,how long will it take to get there ?,0.3479,0.6,22,5,0.5833333333333333,12,N/A,N/A,N/A,N/A,N/A,0.5781
+这 有点冷 。,it 's a bit chilly in here .,it 's a little bit here .,0.3053,0.6786,9,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.5928
+你 什么 时候 比较 方便 ?,when is it convenient for you ?,when will you be convenient ?,0.2389,0.4516,17,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.5654
+"嗯 , 我 不 知道 。","well , i do n't know .","well , i do n't know .",1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+我 会 在 这儿 呆 到 九号 。,i 'll be here until the ninth .,i 'll be here until the ninth .,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+住 一 个 月 有 优惠 吗 ?,do you have a discount for monthly stay ?,is there a discount for staying for a month ?,0.2153,0.3902,25,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.5267
+多 大 ?,how large ?,how big ?,0.2637,0.6364,4,1,0.6666666666666667,3,N/A,N/A,N/A,N/A,N/A,0.4103
+我 能 借 一下 你 的 笔 吗 ?,could i borrow your pen ?,may i borrow your pen ?,0.7598,0.8,5,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7663
+有 人 会 说 日语 吗 ?,do you have someone who speaks japanese ?,does anyone speak japanese ?,0.1306,0.5854,17,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4558
+我 得 穿上 盛装 吗 ?,do i have to be dressed up ?,do i have to be on it on ?,0.4671,0.6786,9,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6057
+"对不起 , 打扰 一下 ; 邮局 怎么 走 ?","excuse me , where is the post office ?","excuse me , how can i get "" post post office ?",0.2919,0.5789,16,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.5443
+我 不 确定 但是 我 会 告诉 她 你 打 过 电话 。,i 'm not sure but i 'll tell her you called .,i 'm not sure but i can n't tell her .,0.4883,0.6,18,4,0.6666666666666667,12,N/A,N/A,N/A,N/A,N/A,0.6822
+请 解释 这些 规则 。,"explain the rules , please .",please explain the rules .,0.3328,0.4286,16,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.7677
+我 不 是 太 喜欢 鱼 。,i 'm not too fond of fish .,i do n't like fish .,0.1756,0.4815,14,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3598
+你 所 饮用 的 饮料 的 数量 会 被 自动 的 记录 下来 。,the amount you drink is billed automatically .,"the drinks in the drinks are always , you can have an automatic record",0.2256,0.0217,45,12,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3682
+你 可以 给 我们 拿 两 张 票 吗 ?,could you get two tickets for us ?,could you get two tickets ?,0.5698,0.7941,7,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7886
+柜台 也 可以 。,counter is fine .,"counter , too .",0.2327,0.6471,6,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.4822
+你 能 得到 一 个 更 高 的 分数 。,you can get an even better score .,you 'd have get in a high jam .,0.2592,0.3529,22,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3309
+稍等 。,just a moment .,just a minute .,0.2866,0.6667,5,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.5872
+你 能 告诉 我 价钱 吗 ?,could you tell me the price ?,can you tell me the price of me ?,0.4671,0.6552,10,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.7026
+今天 谢谢 你 了 。,thank you for today .,thank you all .,0.2232,0.5714,9,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5388
+五一 房间 在 几 楼 ?,what floor is the room on ?,how many in room in room ?,0.2368,0.2963,19,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.3491
+警察 。,police .,i 'll call the police .,0.2214,0,15,4,0.0,2,N/A,N/A,N/A,N/A,N/A,0.424
+有 浴室 吗 ?,does it have a bath ?,do you have a bath ?,0.5081,0.7619,5,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6416
+飞机 什么 时候 起飞 ?,what time does the plane leave ?,when does the plane leave ?,0.6432,0.7812,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7242
+这 种 药 多 长 时间 吃 一 次 ?,how often do i take this medicine ?,how often do you take this medicine ?,0.5,0.9143,3,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8136
+请 告诉 我 在 这个 位置 能 看见 什么 。,please tell me what i can see at this site .,please tell me where i can see .,0.288,0.6364,16,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.6419
+四 站 。,four stops .,four o 'clock .,0.2327,0.4167,7,2,0.3333333333333334,3,N/A,N/A,N/A,N/A,N/A,0.384
+你 能 用 这个 照相机 给 我们 合 张影 吗 ?,could you take a picture of us with this camera ?,can you use the picture with this camera ?,0.2645,0.6735,16,5,0.5454545454545454,11,N/A,N/A,N/A,N/A,N/A,0.6084
+我 想 机场 和 城里 是 统一 的 价格 。,i thought it was a flat rate between the airport and downtown ?,i want to go and a price of the airport and town .,0.1852,0.5238,30,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.4475
+我 想 要 个 靠 前面 的 座位 。,i 'd prefer one at the front of the plane .,"i 'd like a front seat , please .",0.1784,0.5116,21,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.3867
+我 想 要 一 副扑克牌 。,i 'd like a pack of playing cards .,i 'd like a japanese case .,0.3267,0.5714,15,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.4811
+有 定时 行驶 的 公共 汽车 吗 ?,are there any buses running ?,is there a bus department ?,0.2373,0.5172,14,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4109
+第九 月台 。,platform number nine .,nine platform .,0.2163,0.2273,17,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.6004
+"你 送 来 这么 好 的 礼物 , 多谢 了 。",many thanks for nice present .,you would take a gift here for it .,0.2342,0.1333,26,8,0.0,6,N/A,N/A,N/A,N/A,N/A,0.2957
+我们 每 年 有 二十 天 的 带薪假期 。,we are given twenty paid holidays per year .,we had twenty years every year .,0.1859,0.4773,23,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4364
+这个 标志 是 什么 意思 ?,what does the sign say ?,what is the sign that like that sign ?,0.2228,0.125,21,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.4608
+我 想 没 什么 需要 申报 的 。,i do n't believe i do .,i do n't need to declare .,0.2876,0.4348,13,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4641
+对不起 。,excuse me .,excuse me .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+我 有些 衣服 要洗 。,i have some clothes i 'd like to wash .,i have some clothes .,0.2601,0.5385,18,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.6067
+我们 很 高兴 你 一直 有 这么 好 的 理解力 。,we 're glad that you have been so understanding .,we 're happy to have you a good things .,0.2253,0.4694,26,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4378
+好 的 。,all right .,all right .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+"我们 有 从 波士顿 下午 两 点 , 四点 和 六点 起飞 的 。","from boston we have flights at two , four and six p.m.",we have to get up two at boston and boston at six p.m.,0.2691,0.3333,36,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.532
+这 是 十 美元 。,here 's ten dollars .,this is ten dollars .,0.3577,0.7619,5,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.627
+味 重 吗 ?,is it heavy ?,are you looking ?,0.1956,0.0,13,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.2077
+我 想 打开 窗户 。,i 'd like to open the window .,i 'd like to open the window .,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+你 是 韩国人 吗 ?,are you korean ?,are you the old ?,0.2634,0.5625,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.5124
+很 久 没 见 你 了 。,it 's been ages since i last saw you .,it 's very so on a long time .,0.1855,0.4211,22,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.3296
+我们 终于 到 纽约 了 。 现在 我们 要 坐 地铁 去 村庄 。 我们 需要 买 地铁 图 吗 ?,oh . at last we are in the big apple . now we have to take a subway to get to the village . do n't we need to buy a subway map ?,on on last time to new york . we need to go to the subway now . we need to buy a subway now ?,0.1758,0.5,64,21,0.38235294117647056,34,N/A,N/A,N/A,N/A,N/A,0.5135
+好 的 。,all right .,all right .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+去 abc 博物馆 有 几 站 ?,how many stops to the abc museum ?,how many stops to the abc museum ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 用 我 自己 的 方法 做完 这 件 事 。,i want to finish this by my own way .,i 'd like it to look for this way myself .,0.2902,0.2703,27,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4127
+有 瓶 小 一 点 的 吗 ?,do you have a smaller flask ?,do you have a bottle of smaller ?,0.3826,0.5517,13,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6709
+去年 的 销售 情况 怎么样 ?,how was the sales performance last year ?,how about the sales business last year ?,0.3155,0.6098,16,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.5954
+百货 公司 营业 到 几点 ?,how late is the department store open ?,how are playing department open ?,0.1887,0.6154,15,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5249
+我 两 年 前 和 卡特 先生 一 起 工作 过 。,i worked with mr. carter on a job about two years ago .,"i made mr. years ago , two years ago .",0.2154,0.5273,26,7,0.4615384615384615,13,N/A,N/A,N/A,N/A,N/A,0.4483
+"我 想 乘 地铁 , 巴士 和 出租车 参加 一 下午 的 纽约 旋风游 。","i 'm going to take a shot at a whirlwind tour of new york in just one afternoon using the subways , buses and taxis .","i 'd like to go subway and taxi bus and go to new york afternoon , please .",0.1258,0.3761,73,19,0.26923076923076933,26,N/A,N/A,N/A,N/A,N/A,0.4369
+硬 烫发 。,"a tight permanent , please .",hard for permanent .,0.1411,0.4286,16,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4304
+"马桶 不 冲水 了 , 请 派 个 人 上来 。",the toilet does n't flush . please send someone up .,the toilet can n't send up up and send a person .,0.218,0.5192,25,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.4782
+我 要 找 一 个 两 夸脱 的 厚 铝锅 。,"i 'm looking for a two-quart , thick-gauge aluminum pot .",i 'm looking for a simple pin for two .,0.372,0.4386,32,5,0.5454545454545454,11,N/A,N/A,N/A,N/A,N/A,0.4958
+他 现在 去 吃 午饭 了 。,he is out for lunch right now .,he go to eating for lunch .,0.2144,0.3871,19,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4674
+我 推荐 十五三十二 的 。,i 'd recommend a fifteen thirty-two .,i recommend a good one .,0.2229,0.4595,20,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4742
+小心 。,take care .,be careful .,0.2093,0.4545,6,2,0.3333333333333334,3,N/A,N/A,N/A,N/A,N/A,0.449
+我 想 要 一 个 适配器 。,i 'd like an adapter .,i 'd like an assortment of gloves .,0.3656,0.2273,17,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5199
+"我 是 这 次 论坛 的 调停人 , kitashiba 电子 公司 的 toshiki mizukawa 。","i 'm toshiki mizukawa from kitashiba electronics company , the moderator for this forum .","i 'm from american american old old company and hong kong , and c print company .",0.1873,0.2921,63,13,0.13333333333333328,15,N/A,N/A,N/A,N/A,N/A,0.3438
+那 商店 什么 时候 关门 ?,when does that shop close ?,when does that store close the store ?,0.2724,0.5185,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6097
+这个 器具 我们 可以 使用 到 什么 时候 ?,how late may we use the facilities ?,what time will you use this on this meal ?,0.2325,0.3056,25,8,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3342
+能 给 个 免税 的 单据 吗 ?,could you issue a tax-free document ?,can you please get duty free ?,0.2368,0.3243,25,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3414
+我 可以 给 你 看 一 条 项链 吗 ? 是 这个 吗 ?,shall i show you a necklace ? is it this one ?,may i see one ? can you ?,0.1501,0.3478,30,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.3604
+好 的 。,all right .,all right .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+我 一直 想 来 这里 看看 。,i 've always wanted to visit here .,i was looking forward to see .,0.2272,0.3429,23,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3339
+"车 停 在 那边 , 七十七 号 。","the car is parked over there , in spot number seventy-seven .","the car is over there , the fifth number over there .",0.3136,0.623,23,5,0.5833333333333333,12,N/A,N/A,N/A,N/A,N/A,0.5539
+请 挑 个 好 点 的 五十 岁 左右 男士 穿 的 。,please choose good one for a man about fifty years old .,please make out a better about men for a year .,0.1975,0.4286,32,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4414
+这个 我 穿 太 大 了 。,this is too big for me .,this is too big for me .,1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+请 来 这个 。,"this one , please .","this one , please .",1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+是 资历 工资 系统 。,it 's the seniority wage system .,it 's hard to get by people .,0.2178,0.3636,21,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3407
+哪 有 讲 日语 的 医生 ?,where can i find a doctor who speaks japanese ?,which doctor do you get to japanese ?,0.1696,0.4468,26,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4119
+"如果 你 不 想 有 太 多 的 乐趣 , 我们 马上 就 走 。","if you were n't concerned with having so much fun , we would n't be here right now .","if you are not very more , we could be right more .",0.1641,0.4643,45,12,0.368421052631579,19,N/A,N/A,N/A,N/A,N/A,0.4173
+我 怎么 去 这个 地址 ?,how can i get to this address ?,how can i get to this address ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+谢谢 你 盛情 的 款待 。,thank you for your kind hospitality .,thank you for the american lunch .,0.2876,0.4595,20,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4661
+礼品 店 在 哪 ?,where 's the gift shop ?,where 's the gift shop ?,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+请 避开 以下 几 项 。,please avoid the following .,please give me with the few days .,0.2608,0.3571,18,5,0.0,5,N/A,N/A,N/A,N/A,N/A,0.41
+完全 旅游 完 要 花 多 长 时间 ?,how long does it take to complete the tour ?,how long will it cost for that ?,0.1823,0.5,22,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.4004
+"是 的 , 我们 有 您 的 预订 。","yes , we have a reservation for you .","yes , we have your reservation .",0.3419,0.6757,12,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.7247
+嗨 。,hi .,hi .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.7497
+我 耳朵 很 疼 。,i have a terrible ear-ache .,i have a severe pain .,0.3276,0.5357,13,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.4611
+日本 有 美味 的 稻米 。,japan has delicious rice .,it has almost osaka with japan .,0.2621,0.0385,25,5,0.0,5,N/A,N/A,N/A,N/A,N/A,0.3593
+我 能 用 这个 传真机 吗 ?,can i use the fax machine ?,can i use this in this ?,0.2876,0.6296,10,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5115
+我 真的 想 吃 一 顿 丰盛 的 晚餐 。,i 'm really looking forward to a good dinner .,i really really like dinner a meal .,0.2308,0.3261,31,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.4366
+这个 城市 有 什么 观光 旅游 ?,do you have any sightseeing tours of the city ?,what are today anywhere you can today 's sightseeing city ?,0.2045,0.1702,39,9,0.1,10,N/A,N/A,N/A,N/A,N/A,0.4654
+我 想 托运 这个 行李 。,i 'd like to check this baggage .,i 'd like to check this baggage .,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+请 好好 保管 别 丢 了 。,please take care not to get lost .,please keep it by .,0.1297,0.4412,19,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3168
+除夕夜 你 会 干 什么 ?,what are you going to do on new year 's eve ?,what are your order with you ?,0.1211,0.4444,25,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4038
+这个 衣服 不 适合 我 。,this dress does n't fit me .,this dress does n't fit for me .,0.5946,0.8571,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8257
+我 需要 一 个 日文 翻译员 。,i need to have a japanese interpreter .,i need a japanese newspaper .,0.2372,0.6154,15,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.5436
+我 有 三 天 的 餐费 。,i have cash to cover meals for three days .,i have from my own day .,0.1499,0.4186,25,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.3275
+有 体温计 吗 ?,do you have a clinical thermometer ?,do you have a thermometer ?,0.5115,0.75,9,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.761
+能 给 我 一 个 节目单 吗 ?,"may i have a programme , please ?",may i have a program ?,0.385,0.6667,11,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6635
+填 什么 处理 表 ?,what papers are necessary for processing ?,any form in the form do you have ?,0.1969,0.2857,30,8,0.0,7,N/A,N/A,N/A,N/A,N/A,0.2598
+我 有 一 点 食欲 。,i have little appetite .,i have a appetite .,0.3365,0.75,6,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6777
+我 跺脚 有 五 分钟 了 。,i stomped my feet for five minutes .,i in in a five minutes with the stomach .,0.213,0.1389,31,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4571
+"如果 我 买 三 个 , 能 有 百分之十 的 折扣 吗 ?","if i buy three of them , can i get ten percent off ?",can you buy three of three percent if i buy ten percent discount ?,0.3029,0.5,26,7,0.5,14,N/A,N/A,N/A,N/A,N/A,0.5582
+那 个 差价 你 可以 给 我 买 一 杯 咖啡 。,you can buy me a cup of coffee with the difference .,there will buy one from the back of you .,0.2394,0.25,39,10,0.16666666666666657,12,N/A,N/A,N/A,N/A,N/A,0.3809
+希望 能 再次 见到 你 。,hope to see you again .,i hope you again .,0.3147,0.6522,8,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6482
+我 知道 好莱坞 有 更 多 有趣 的 东西 。,i know a couple more interesting things about hollywood .,i wonder there is a interesting one that 's never much .,0.2724,0.3684,36,9,0.1,10,N/A,N/A,N/A,N/A,N/A,0.4074
+还 有 预订 的 座位 吗 ?,are any reserved seats available ?,do you have a reservation for seats ?,0.2357,0.1765,28,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.4173
+你 要 给 正好 的 钱 。,you have to have exact change .,you have the amount of the amount .,0.2178,0.3871,19,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.397
+"两 杯 红 葡萄酒 , 谢谢 。","two glasses of red wine , please .","two glasses of red , please .",0.5154,0.8529,5,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8107
+"对不起 , 打扰 一下 , 请 问 我 应该 在 哪儿 取 行李 ?","excuse me , where should i claim my bags ?","excuse me , where can i pick up my baggage ?",0.2699,0.619,16,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.5868
+"是 的 , 两 瓶 可 乐 。","yes , two cokes .","yes , two bottles of a bottle .",0.2576,0.0588,16,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.4551
+我 是 那 个 受害人 。,i 'm the one who 's the victim .,i come that .,0.0667,0.3125,22,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.23
+你 是 我 一 生 中 见 过 的 最 有 魅力 的 人 。,you are the most attractive person i have ever met in my whole life .,you 've been in a real house where i 've had an most person .,0.2947,0.3478,45,13,0.13333333333333328,15,N/A,N/A,N/A,N/A,N/A,0.4208
+你 觉得 这个 看 起来 怎样 ?,how do you think this looks ?,do you think this look looks like ?,0.3826,0.5172,14,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.7078
+我 能 看看 其他 不 同样式 的 吗 ?,may i see some other ones in a different style ?,may i see the other size ?,0.1717,0.4792,25,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.4525
+"女士们 先生们 , 下午 好 , 欢迎 你们 乘坐 本 次 航班 。","ladies and gentlemen , good afternoon and welcome aboard .","ladies and gentlemen , welcome you have a good flight .",0.2699,0.5345,27,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.6048
+请 给 我 些 棉纸 。,please give me some tissues .,please give me some eye .,0.5373,0.7931,6,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.732
+我 能 给 一二一一 房间 的 miyata 小姐 留言 吗 ?,"may i leave this message for miss miyata , room twelve eleven ?",can i leave the message for a room room ?,0.2077,0.5397,29,7,0.4615384615384615,13,N/A,N/A,N/A,N/A,N/A,0.4933
+到 洛杉机 的 班机 号码 是 零二三 。,the flight number to los angeles is zero two three .,the flight to los angeles is one o 'clock to los angeles .,0.239,0.5,26,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.5471
+请 把 这个 换成 零 钱 。,please change this into small change .,please exchange this into small .,0.2932,0.7632,9,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7282
+去 阿比路 多少 钱 ?,how much does it cost to abbey road ?,how much is it to go to the air ?,0.2253,0.5946,15,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4698
+谢谢 你 的 好意 。,thank you very much for your kindness .,thank you for your kindness .,0.433,0.7436,10,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7336
+我 想 也 要 些 零 钱 。,"i 'd like to have some small change , too .","i would like some small change , too .",0.5054,0.7209,12,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.7294
+能 给 我 拿 一百 克 南瓜 沙拉 吗 ?,can i have a hundred grams of pumpkin salad ?,can i have a hundred hundred salad salad ?,0.4594,0.6667,15,3,0.7,10,N/A,N/A,N/A,N/A,N/A,0.6217
+几 点 了 ?,what time is it ?,what 's the time ?,0.2616,0.4118,10,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.533
+是 这个 飞机 吗 ?,is this the right plane ?,is this the plane ?,0.3683,0.76,6,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7363
+有 城市 观光 巴士 吗 ?,do you have any city sightseeing bus tours ?,is there any city buses tours sightseeing sightseeing sightseeing ?,0.2253,0.0909,40,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.4966
+你 不 能 在 巴士 上 买票 。,you can n't buy a ticket in the bus .,you can n't have a brochure at the bus .,0.3502,0.6486,13,3,0.7,10,N/A,N/A,N/A,N/A,N/A,0.5688
+"那么 , 在 那儿 见面 怎么样 ?","how about meeting there , then ?","then , is it over there ?",0.2816,0.3438,21,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.4167
+特兰西瓦尼亚 航空 公司 是 个 不 提供 不 必要 服务 的 航空 公司 。,"well , transylvania air is a no frills airline .",the airline airlines flight is a necessary 's name .,0.213,0.2292,37,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.402
+是 什么 电影 ?,what 's the movie ?,what 's the movie ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+这 趟 列车 直达 巴黎 吗 ?,does this train go direct to paris ?,does this train go to paris ?,0.5154,0.8056,7,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.7894
+那 个 树 是 什么 树 ?,what 's the name of that tree ?,that are about that special ?,0.17,0.4194,18,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3632
+对 您 很 好 。,good for you .,that 's fine to you .,0.2214,0.0714,13,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.3145
+这 附近 有 购物 商场 吗 ?,is there a shopping mall near here ?,is there a shopping mall near here ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+我 怎么 才 能 拿到 潜水 许可证 ?,how can i get a diving license ?,how can i get a license to dive a license ?,0.4035,0.5625,14,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6438
+"打扰 一下 , 您 能 给 我 推荐 一 家 饭店 吗 ?","excuse me , can you recommend a hotel to me ?","excuse me , would you recommend a hotel hotel , please ?",0.317,0.6444,16,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.6367
+"如果 我 从 日本 寄它 , 你 能 修理 吗 ?","if i send it from japan , can you fix it ?","if i 'm in japan , you can fix it by japan .",0.2979,0.381,26,8,0.3333333333333334,12,N/A,N/A,N/A,N/A,N/A,0.5747
+"唔 , 让 我 想想 他们 在 邮局 说 的 话 。","well , let 's see what they say at the post office .","well , let 's see them in the post office .",0.49,0.7692,12,4,0.6923076923076923,13,N/A,N/A,N/A,N/A,N/A,0.6882
+两 岁 男孩 容易 玩 吗 ?,is it easy for a two year old boy to play ?,is it easy to play a while three years ?,0.2244,0.4419,24,8,0.3333333333333334,12,N/A,N/A,N/A,N/A,N/A,0.5498
+不 。,no .,no .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.7497
+一 个 小份 的 比萨饼 加上 意大利 香辣 肠 。,"one small pizza with pepperoni , please .","a small pizza with the pizza of the pizza , please .",0.2919,0.4878,21,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.5493
+这些 饭店 有 什么 不同 ?,what 's the difference between those hotels ?,what 's these hotels ?,0.1847,0.4889,23,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5157
+那 味道 真的 不错 。,it 's really good .,that 's really good .,0.6687,0.8421,3,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7925
+这 是 终点站 吗 ?,is this the last stop ?,is this the terminal ?,0.3147,0.6087,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5685
+但是 没有 到 金门 大桥 的 。,but it does n't say for golden gate bridge .,"but , there is no to go to the golden gate bridge .",0.2045,0.5909,18,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.5027
+请 把 美元 换成 英镑 。,please convert dollars into pounds .,please change dollars for pounds .,0.2633,0.75,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6026
+我们 需要 经常 检查 计划 的 进度 。,we need to check on the progress of the project regularly .,we need to have a schedule on the schedule .,0.2159,0.4915,30,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.4329
+这个 旅游 多少 钱 ?,how much is the tour ?,how much is this tour ?,0.3833,0.9091,2,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.763
+在 哪里 开始 ?,where does it start ?,where am ?,0.1354,0.4286,12,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.3743
+能 存 包 吗 ?,can you keep my valuables ?,can you keep my baggage for me ?,0.3656,0.5556,12,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5711
+酒精 饮料 也 是 免费 供应 吗 ?,"are alcoholic drinks served free , too ?",is there a high drink for dinner too ?,0.1873,0.4,24,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.3679
+"如果 我 的 信用卡 被 人 用 了 , 你 可以 偿还 相应 的 数量 吗 ?","if my credit card is used , could you compensate the amount ?",by the credit who do be used to use my credit card ?,0.1939,0.3934,37,11,0.15384615384615385,13,N/A,N/A,N/A,N/A,N/A,0.453
+飞机 在 迈阿密 停 吗 ?,does this flight stop at miami ?,does the plane stop at miami ?,0.4347,0.7812,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.643
+我们 在 哪 再 见面 ?,where do we meet again ?,where shall we meet ?,0.2317,0.5417,11,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5813
+我 有 低 血压 。,i have low blood pressure .,i have a low pressure .,0.3311,0.7778,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6953
+我 的 行李 已经 直接 托运 到 目的 地 了 吗 ?,has my baggage been checked through to the final destination ?,is my baggage through my final claim until the final ?,0.2692,0.3871,38,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.5233
+大约 五百 法郎 或者 一百 美元 。,about five hundred francs or american one hundred dollars .,about five hundred thousand or eighty hundred dollars .,0.3409,0.7119,17,3,0.7,10,N/A,N/A,N/A,N/A,N/A,0.6319
+"有 了 电子 邮件 , 我 可以 交流 信息 。","thanks to e-mail , i can exchange information .","there are an american mail , i can leave it .",0.1997,0.3191,32,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.4129
+你 想好 去 哪 了 吗 ?,have you got any idea where you 're going ?,have you got any aspirin ?,0.2759,0.5349,20,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.5124
+请 给 我 十五 加仑 柴油 。,"give me fifteen gallons of diesel , please .","give me fifteen gallons of film , please .",0.5969,0.8864,5,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.7952
+我 要 一 片 这个 。,i 'll take a slice of this .,i 'll have a slice of this .,0.5946,0.9286,2,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.7832
+是 的 。,yeah .,yes .,0.2467,0.6667,2,1,0.5,2,N/A,N/A,N/A,N/A,N/A,0.2799
+"对不起 , 请 按 开门 。","excuse me , push the shutter , please .","excuse me , press the shutter please .",0.311,0.8718,5,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.7417
+这 本 杂志 在 哪里 ?,where 's this magazine ?,where this is a magazine ?,0.2633,0.7083,7,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.6775
+能 看 一下 您 的 护照 吗 ?,can i see your passport ?,"could you see your passport , please ?",0.2576,0.36,16,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.5518
+"我 是 个 工程师 , 你 呢 ?",i 'm an engineer . and you ?,"i 'm an overseas , sir ?",0.2493,0.4643,15,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4057
+怎么 走 最 快 ?,what 's the fastest way ?,how do i get the best way ?,0.2178,0.44,14,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.4452
+哦 不 。,oh no .,oh no .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+您 的 账单 上 是 一百 美元 。,your bill comes to one hundred dollars .,your bill on one hundred dollars .,0.4238,0.825,7,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7306
+"对不起 , 这 没有 琼斯 先生 。","i 'm sorry , there 's no mr. jones here .","sorry , there 's n't mr. jones .",0.2937,0.7073,12,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.6809
+我 想 我 对 公司 总的 看法 不错 。,i think i have a good overview of the company .,i think i have a previous company .,0.4087,0.6596,16,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.5963
+照 得 太 好 了 。,great shot .,it 's a great .,0.2364,0.0833,11,4,0.0,3,N/A,N/A,N/A,N/A,N/A,0.4453
+能 给 我们 在 教堂 前 中间 的 地方 照 张 相 吗 ?,could you take a picture with us in the middle in front of the church ?,can you take a picture of the center in the church ?,0.2613,0.6056,28,7,0.5625,16,N/A,N/A,N/A,N/A,N/A,0.6063
+对方 已 接通 。,your party 's on the line .,your party is on the line .,0.4889,0.963,1,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8148
+假期 快乐 。,have a nice vacation .,happy you go to the holidays .,0.1991,0.0,22,6,0.0,5,N/A,N/A,N/A,N/A,N/A,0.2067
+我 在 哪 坐 去 波士顿 的 巴士 ?,where can i catch a bus to go to boston ?,where do i get the bus for boston ?,0.1886,0.6098,16,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.4682
+"我 知道 了 。 你 介意 等 我 二十 分钟 吗 ? 享受 你 的 咖啡 , 我 想到 风雨 商业街 廊给 我 的 妻子 和 女儿 买 点儿 东西 。",i see . would you wait here for about twenty minutes to enjoy your coffee while i do shopping in galleria for my wife and daughters ?,i see . you have waiting for you ? i see . you 're come for one of my coffee and daughter my area and daughter for my daughter .,0.1319,0.3835,82,24,0.11111111111111115,27,N/A,N/A,N/A,N/A,N/A,0.4526
+有 日语 导游 吗 ?,are there any japanese-speaking guides ?,is there a japanese-speaking guide ?,0.2626,0.85,6,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6816
+请 再 走 远点 。,"please go a little further , please .",please go up that .,0.1445,0.4324,21,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3935
+太 靠近 厕所 了 。,it 's too close to the toilet .,there 's too wrong from the wrong .,0.234,0.4194,18,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4061
+她 的 地址 是 洛杉机 投石者 大街 一七四七号 。,"her address is seventeen forty-seven , stoner avenue , los angeles .",she 's the departure address at los angeles at los angeles .,0.1865,0.3824,42,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4049
+"对 我 来说 , 那 是 一 次 奇特 的 经历 。",it was a very unique experience for me .,"that 's for me , that 's hard to the home experience .",0.1903,0.0,40,12,0.0,9,N/A,N/A,N/A,N/A,N/A,0.4168
+我 想 要 一些 脱毛剂 。,i 'd like some depilatory cream .,i 'd like some shaving lotion .,0.4347,0.5455,15,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.5453
+有 这些 宽松 的 东西 卖 吗 ?,do you sell these things loose ?,are there any items that 's in these shoes ?,0.2325,0.0312,31,9,0.0,7,N/A,N/A,N/A,N/A,N/A,0.3159
+我 下车 后 该 怎么 做 ?,what do i do when i want to get off the bus ?,what should i do to do it after i get off ?,0.264,0.4444,25,8,0.3846153846153846,13,N/A,N/A,N/A,N/A,N/A,0.5425
+几 路 巴士 ?,what number bus ?,how long does the bus ?,0.2214,0.1765,14,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.3073
+请用 普通 邮件 寄 这个 到 这个 住址 。,please send this by surface mail to this address .,please send this address by address .,0.2466,0.6,20,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.6127
+今晚 的 表演 还 有 座位 吗 ?,are any seats still available for tonight 's show ?,are there any seats for tonight 's available ?,0.2758,0.4118,30,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.7125
+"对不起 打断 一下 , 让 我们 直 奔 主题 吧 。","sorry for interrupting , but let 's get down to the main issue .","sorry , try , let 's "" about the whole day .",0.1846,0.4375,36,8,0.4285714285714286,14,N/A,N/A,N/A,N/A,N/A,0.3904
+商业 环境 的 变化 可能 会 影响 这个 项目 。,changes in the business environment may affect the project .,japanese business 's best from the project man .,0.1993,0.4667,32,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4745
+烹茶 饮茶 的 艺术 在 日本 被 称为 茶道 。,tea ceremony is called sado in japan .,the art in the art in japan is the tea from japan .,0.2393,0.1579,32,10,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3709
+今天 是 什么 节目 ?,what is today 's program ?,what 's today 's program ?,0.5373,0.9615,1,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8091
+"这 有 日本 航空 公司 和 全日 航空 公司 的 航班 , 十点五十五 起飞 。",there are jal and ana flights which leave at ten fifty-five .,"this is japan , ten airlines flight , ten zero one .",0.229,0.377,38,11,0.08333333333333343,12,N/A,N/A,N/A,N/A,N/A,0.329
+你 说 是 什么 原因 ?,what would you say is the cause ?,what me you say ?,0.1553,0.4545,18,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4743
+我 想 要 和 这个 相配 的 东西 。,i 'd like something to match this .,"i 'd like something to look with this , please .",0.3816,0.5143,17,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6424
+这里 有 公共 电话 吗 ?,is there a public phone here ?,is there a public phone here ?,1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+卫生间 在 哪 ?,where is the lavatory ?,where 's the toilet ?,0.2616,0.6087,9,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5042
+你 喜欢 吃 吗 ?,did you like it ?,you like your like ?,0.2634,0.3529,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.5178
+那 种 旅游 每 天 上午 九点 发车 。,that tour leaves at nine a.m. everyday .,that 's all the morning leaving there a morning at nine .,0.197,0.05,38,10,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3886
+在 上面 加 条 缎带 好 吗 ?,would you put a ribbon on it ?,is good with a boat ?,0.17,0.3333,20,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.2673
+是 战争片 吗 ?,is it a war picture ?,is it an made ?,0.2156,0.5238,10,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4206
+靠 窗 的 位子 就 可以 。,one by the window would be okay .,"window table , please .",0.1297,0.3333,22,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3297
+你 是 埃伯特 女士 吗 ? 我 是 hiroshi sato 。,are you mrs. ebert ? i 'm hiroshi sato .,are you ms. lady ? my name ? is that sato .,0.2477,0.55,18,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.437
+"对不起 , 我们 只有 橙汁 。","i 'm sorry , but we only have orange juice .","i 'm sorry , we have only orange juice .",0.3758,0.75,11,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.8116
+你 能 借 我 些 钱 吗 ?,could you lend me some money ?,can you lend me some ?,0.4548,0.6667,10,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6624
+祝 您 愉快 。,have a nice time .,have a good day .,0.2634,0.5556,8,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.4369
+我 应该 报告 谁 ?,who should i notify ?,where should i report your report ?,0.2302,0.0952,19,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.3931
+"不 , 我 是 说 自然 生长 的 花 。","no , i mean flowers which grow .","no , i 'm not a little natural thousand every thousand .",0.1865,0,37,8,0.0,8,N/A,N/A,N/A,N/A,N/A,0.2879
+这些 东西 我 也 要 申报 吗 ?,"do i have to declare these things , too ?","is these these things me , too ?",0.2348,0.561,18,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.5464
+今天 早晨 发生 了 一 个 大 地震 。,there was a big earthquake this morning .,it happened a large in in this morning this morning .,0.1997,0.3171,28,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4073
+我 遭 抢劫 了 。,i 've been attacked .,i 've been robbed .,0.3844,0.7143,6,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6203
+"不 , 我 刚 到 。","no , i just got here .","no , i just just .",0.4548,0.6364,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6203
+不 要 忘 了 带 护照 。,do n't fail to bring your passport with you .,that 's all all your passport .,0.1499,0.4444,25,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4186
+"我 喜欢 , 但是 经常 吃 对 我 来说 太 贵 了 。","i like it , but it 's too expensive for me to eat very often .","i like it , but many often i can get to eat .",0.2812,0.5161,30,8,0.5,16,N/A,N/A,N/A,N/A,N/A,0.5361
+那 很 容易 懂 。,that was easy to understand .,it is easy to understand .,0.5081,0.8276,5,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7114
+他们 经常 到 游乐园 去约会 。,"for dates , they go to amusement parks .",do they often go to an park 's park .,0.213,0.5,20,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.449
+给 我 拿 十 张 三十五 美分 的 邮票 。,let me have ten thirty-five cent stamps .,give me ten thirty-five stamps .,0.2372,0.6829,13,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.655
+这个 周末 我们 为什么 不 去 看 电影 ?,why do n't we go to movie this weekend ?,why do n't we go to the movies on this weekend .,0.4692,0.775,9,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.7354
+有 稍微 好 点 的 吗 ?,do you have anything a little bit better ?,do you have anything a little bit ?,0.7673,0.8333,7,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.844
+这 一 杆 飞过 池塘 多 远 ?,how long is the carry over that pond ?,how far this one of band by ?,0.208,0.3421,25,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.3397
+让 我 查一下 。,let me check .,let me check on that for you .,0.2576,0,16,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.5445
+最 受 欢迎 的 旅游 是 什么 ?,what 's the most popular tour ?,what is the most popular tour ?,0.6435,0.9677,1,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8331
+在 护照 管理处 你 一定 要 出示 你 的 护照 。,you must show your passport at the passport control .,your passport you have to show your passport .,0.2319,0.4151,31,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.5913
+我们 在 博物馆 这儿 。,we 're here at the museum .,we are here there 's at the museum .,0.3303,0.6296,10,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6721
+那 个 带 小 荷包 的 棕色 的 。,the brown one with the change purse .,that include a brown brown .,0.17,0.2432,28,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.3245
+我 的 肚子 一 阵 一 阵 的 痛 。,my stomach twinges .,my stomach has a hard pain in my stomach .,0.1983,0,26,7,0.0,4,N/A,N/A,N/A,N/A,N/A,0.3884
+你们 要 打 多少 局 ?,how many sets will you do ?,how much do you need to make a table ?,0.2765,0.0741,25,8,0.0,7,N/A,N/A,N/A,N/A,N/A,0.3645
+请 照 我 的 方 配药 。,please fill my prescriptions .,please take my picture .,0.2616,0.5333,14,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.4425
+"当然 , 但是 你 最 好用 闪光灯 。","of course , but you 'd better use a flash .","of you , but the best will the flash .",0.2537,0.5349,20,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.469
+能 给 我 两 张 订座 的 票 吗 ?,may i have two tickets for the reserved seats ?,can i have two seats for the reserved ?,0.3525,0.7234,13,3,0.7,10,N/A,N/A,N/A,N/A,N/A,0.7247
+我 能 发 个 电报 吗 ?,can i send a telex ?,can i send a telegram ?,0.5373,0.8,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7648
+我 是 一二三 房间 的 watanabe goroh 。,"i 'm watanabe goroh , room one two three .","i 'm watanabe goroh , i 'm watanabe . of room one three .",0.3408,0.5,21,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.6729
+我 本来 可能 会 氮 麻醉 。,i might have had nitrogen narcosis .,i can the internet an ice pens .,0.2357,0.3333,24,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.2681
+我 知道 。,i know .,i see .,0.2637,0.5,4,1,0.6666666666666667,3,N/A,N/A,N/A,N/A,N/A,0.3074
+我 想 要 个 奶瓶 。,i 'd like a nursing bottle .,i 'd like a teacher .,0.4548,0.5,14,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.5433
+中间 的 宝石 是 一 个 钻石 吗 ?,is the center stone a diamond ?,is the center of stone of a area ?,0.2592,0.6452,11,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6156
+请 把 你 的 地址 写 在 这里 。,please write your address here .,please write down your address here .,0.4889,0.8438,5,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8183
+我 想 要 个 止痛药 。,i want a pain killer .,i 'd like a sedative .,0.2626,0.2727,16,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.3082
+我们 对 经济学 感 兴趣 。,we 're interested in economics .,we 're interested in raw .,0.5373,0.7188,9,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7121
+我 不 清楚 在 美国 应该 是 什么 。,i 'm not sure what it would be in america .,i can n't make it very well in america .,0.206,0.5349,20,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.4463
+我 该 买 几 盒 巧克力 ?,how many boxes of chocolate should i buy ?,what should i buy the japanese fever ?,0.2274,0.1905,34,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.4385
+入口处 的 纪念品 商店 。,at the souvenir shop by the entrance .,the souvenir shop for the entrance of the local shop .,0.2445,0.3684,24,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.6095
+我们 昨天 刚 从 日本 来到 美国 。,we just came to america from japan yesterday .,we only got to japan in japan .,0.2473,0.3696,29,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.3552
+我 很 荣幸 能 遇到 一 位 像 你 这么 优秀 的 男士 。,i am so honored to have met a wonderful man like you .,i could be happy to have a place which kind of person on you .,0.2353,0.2963,38,10,0.23076923076923067,13,N/A,N/A,N/A,N/A,N/A,0.3963
+我们 现在 要 些 咖啡 吗 ?,shall we have some coffee now ?,shall we get some coffee now ?,0.4889,0.871,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.771
+"快点 , 都 来 。","come on , everybody up .",come on .,0.156,0.375,15,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4722
+我 是 个 自由 投稿人 。,i 'm a free-lance journalist .,i 'm a business business .,0.3276,0.4,18,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.386
+"很 好 , 我 的 一 个 包 还 没有 出来 。","well , one of my suitcases has n't shown up .","fine , i have n't received a bag back yet .",0.2554,0.2444,34,9,0.18181818181818174,11,N/A,N/A,N/A,N/A,N/A,0.2956
+请 稍 等 。,"one moment , please .","just a moment , please .",0.5081,0.7143,6,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.7019
+有 免费 的 场地 吗 ?,are there any courts free ?,do you have any express free ?,0.2302,0.4815,14,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4448
+多 长 时间 来 趟 车 ?,how often do the buses run ?,how often does a train ?,0.2074,0.6071,11,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5066
+有 一点 太 贵 了 。,it 's a bit too expensive .,it 's a little too expensive .,0.4501,0.8519,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7325
+我 想 租 一些 深水 潜泳 用具 。,i 'd like to rent some skin-diving equipment .,i 'd like to rent some equipment and play the equipment .,0.4692,0.587,19,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.6315
+没有 小点 的 吗 ?,have n't you anything smaller ?,do n't you have anything smaller ?,0.3522,0.7097,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7885
+我 现在 没有 多少 时间 了 。,i do n't have much time now .,"now , i do n't have any time .",0.3433,0.5172,14,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.658
+这 是 个 机械 表 。,this is an automatic one .,this is a scratch .,0.2156,0.5769,11,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4347
+前面 就 是 。,you 'll see it right in front of you .,you 'll see it right in front of you .,1.0,1.0,0,0,1.0,10,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 乘坐 豪华 巴士 去 机场 。,i want to take the shuttle bus to the airport .,i would like to go to the airport bus to the airport .,0.3252,0.5532,21,5,0.5454545454545454,11,N/A,N/A,N/A,N/A,N/A,0.5841
+离 酒店 最近 的 餐馆 在 哪里 ?,where 's the closest restaurant from this hotel ?,where is the restaurant for downtown ?,0.2116,0.5918,20,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.492
+"我 刚才 还 在 找出 租车 , 但是 这个 更 好 。","i was looking for a taxi , but this is better .",i was a taxi room just a taxi so while but there is this better .,0.2801,0.4043,28,8,0.3333333333333334,12,N/A,N/A,N/A,N/A,N/A,0.5238
+我 在 登记 名单 上 找 不 到 你 名字 。,i cannot find your name on the reservation list .,i can n't check in your name on my room .,0.2111,0.4694,26,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4505
+是 美国 电影 吗 ?,is it an american film ?,is it american movies ?,0.2317,0.6667,8,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6205
+更衣室 在 哪 ?,where 's the dressing room ?,where 's the dressing room ?,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+请 稍 等 。,"just a moment , please .","just a moment , please .",1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+"请 稍 等 先生 。 我 查查 。 对不起 , 出错 了 。 这 是 新 账单 。","just a minute , sir . i 'll check on that . i 'm sorry about the mistake. here 's a new bill .","please wait a moment , i just sorry , but there 's a new bill . this is a new bill .",0.1798,0.3723,59,18,0.25,24,N/A,N/A,N/A,N/A,N/A,0.492
+我 真的 很 抱歉 。,"i 'm really , sorry .",i 'm really sorry .,0.3683,0.9048,2,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8019
+我 一 到 伦敦 就 给 酒店 打 电话 。,let 's call the hotel as soon as we arrive in london .,i 'll call the hotel as soon as you give me a london .,0.3935,0.7222,15,6,0.5384615384615384,13,N/A,N/A,N/A,N/A,N/A,0.6419
+这 衣服 怎样 ? 合适 吗 ?,how is the dress ? does it fit ?,how about this dress ?,0.1183,0.375,20,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4195
+我 在 日本 不 能 穿 这么 鲜艳 的 东西 。,i could n't wear something this flashy in japan .,i did n't wear such this kind to so in japan .,0.2374,0.6122,19,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.5567
+请 给 我 拿 一一五 房间 钥匙 。,"could i have my key , please ? the room number is one fifteen .",please bring me a little key .,0.0836,0.254,47,13,0.13333333333333328,15,N/A,N/A,N/A,N/A,N/A,0.2911
+你 能 形容 下 那 个 人 吗 ?,can you describe the person ?,can you move to that man ?,0.2302,0.4828,15,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4009
+你 应该 去 一 家 百货 公司 。,you should go to a department store .,you should go to the department store .,0.5,0.9189,3,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8179
+我 想 要 七点三四 个 人 坐 的 桌子 。,i 'd like a table for three or four at seven .,i 'd like a table for a table .,0.4374,0.587,19,5,0.5833333333333333,12,N/A,N/A,N/A,N/A,N/A,0.5895
+修 它 大概 会 花 三百 美元 。,it 'll cost about three hundred dollars to fix it .,it will take three hundred dollars including it three hundred dollars .,0.2064,0.2157,40,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.476
+你 有 孩子 吗 ?,you have children ?,do you have any children ?,0.3131,0.6316,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.6873
+请 给 我 些 信纸 。,please give me some writing paper .,please give me some writing paper .,1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+盒子 要 收费 。,there is a charge for boxes .,there will have an extra charge for a charge .,0.2679,0.2069,23,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.4755
+我 把 手 切 着 了 。,i cut my finger badly .,i left my finger .,0.2317,0.6087,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5961
+这 附近 有 邮筒 吗 ?,is there a mailbox around here ?,is there a parking lot around here ?,0.4032,0.75,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.648
+我 想 我 走错 门 了 。,i think i 'm at the wrong gate .,i think i 'm going in the wrong .,0.3689,0.5938,13,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.6794
+你 对 什么 特别 的 药物 过敏 吗 ?,are you allergic to any specific medication ?,do you have an special to read of a special ?,0.2554,0.2889,32,8,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3772
+我 等 着 收到 它们 。,i 'll look forward to receiving them .,i 'll wait for them .,0.2244,0.4737,20,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.427
+我 肚子痛 。,i 've got a stomachache .,i have a stomachache .,0.3147,0.76,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.658
+红 绿 灯 是 红 的 。,the light was red .,the traffic light got the green light .,0.2608,0,24,5,0.0,5,N/A,N/A,N/A,N/A,N/A,0.3513
+我们 必须 要 把 手推车 推 回到 这里 吗 ?,do we have to return this cart back here ?,do we have to leave the cart here back ?,0.3124,0.6429,15,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.6593
+请 把 这个 十 美元 换成 五 个 一 美元 和 一 个 五 美元 的 。,please break this ten-dollar bill into five singles and one five-dollar bill .,please change this dollars and one dollar for five dollars .,0.1887,0.5,39,10,0.23076923076923067,13,N/A,N/A,N/A,N/A,N/A,0.4774
+我 的 行李 被 偷 了 。,my baggage was stolen .,my baggage was stolen .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+参加 一 个 在 旧金山 举行 的 会议 。,to attend a meeting in san francisco .,it 's held a meeting in san francisco .,0.5874,0.8158,7,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.7226
+你 是 加拿大 什么 地方 的 人 ?,where in canada are you from ?,what kind of people do you have ?,0.2357,0.3,21,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.3087
+还 有 几 个 区 这么 远 。,it 's a few blocks that away .,it 's a few kind of men at this time .,0.2481,0.3667,19,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4656
+今晚 从 上班 地方 回来 的 路 上 我 可以 给 你 买 什么 东西 吗 ?,is there anything i can pick up for you on the way back from work tonight ?,can i get some of the way to work for some when i buy for this way ?,0.1898,0.28,54,17,0.0,17,N/A,N/A,N/A,N/A,N/A,0.4169
+他 必须 要 住院 吗 ?,will he has to be in the hospital ?,is it going to go in the hospital ?,0.3156,0.6571,12,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5613
+我 想 去 圣地亚哥 。,i want to go to san diego .,i 'd like to go to san diego .,0.6105,0.7407,7,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7133
+"唔 , 我 想 该 是 离开 的 时候 了 。","well , it 's about time to leave , i suppose .","well , what i want to leave .",0.1868,0.4348,26,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.4529
+"很 感谢 你们 的 支持 和 合作 , 这 是 我们 的 一点儿 心意 。","we 're very grateful for all your support and cooperation , and this is a small token of our appreciation .",thank you very much for your own date and here 's new to the opera .,0.2045,0.3458,70,16,0.2380952380952381,21,N/A,N/A,N/A,N/A,N/A,0.3523
+你 想要 试 下 这个 吗 ?,would you like to try this one ?,would you like this one ?,0.3673,0.7812,7,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7484
+在 饭店 住 一 晚 要 花 多少 钱 ?,how much does it cost for one night at the hotel ?,how much does it cost to stay at the hotel ?,0.5367,0.78,11,3,0.75,12,N/A,N/A,N/A,N/A,N/A,0.6998
+但 天气 不 是 很 热 也 不 是 很 冷 。,but it is n't too hot or cold .,but it 's the cold very cold .,0.2456,0.5806,13,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4342
+"你 好 , 我 是 nagata 先生 。","hello , this is ms. nagata .","hello , i 'm mr. speaking .",0.2302,0.5357,13,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.4032
+请 替 我 预约 好 吗 ?,"could you make a reservation for me , please ?","could you make an appointment for me , please ?",0.5254,0.7609,11,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.6915
+这 件 配 的 是 活动 的 衬垫 和 吊带 吗 ?,does this have removable pads and straps ?,is this made from japan 's made with me ?,0.2325,0.4286,24,8,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3284
+"我 知道 了 , 我们 有 一 位 酒店 医生 。","i see , we have a hotel doctor .","i see , we have a doctor doctor .",0.6606,0.875,4,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.7581
+我 需要 接种 黄热病 的 疫苗 吗 ?,do i need a vaccination against yellow fever ?,do i need to insure a super music machine ?,0.2276,0.3478,30,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4099
+"所以 , 请 一定 要 小心 。","so , please be careful .","so , you are careful right to each care .",0.213,0,27,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.4194
+我 能 成为 那里 的 会员 吗 ?,can i become a member there ?,can i get there for one hundred ?,0.234,0.3448,19,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.4243
+我们 到 那 以后 能 通知 我 一 声 吗 ?,will you let me know when i arrive there ?,will you let me know when we get there ?,0.5814,0.8095,8,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.7411
+你 能 快点 吗 ? 我 七点钟 有 个 预约 。,could you hurry ? i have a reservation at seven .,can you hurry up ? i 'm a reservation at seven .,0.4064,0.7755,11,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.7189
+你 有 阑尾炎 。,you have appendicitis .,you have half appendicitis .,0.3365,0.7826,5,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.7683
+我 想 去 一 家 讲 英语 的 餐馆 。,i 'd like a restaurant where english is spoken .,i want to go of a good restaurant in english .,0.2902,0.3333,32,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4819
+请 把 它们 送到 我 的 旅馆 。,please have them delivered to my hotel .,please deliver my hotel .,0.211,0.625,15,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5723
+可以 把 裙子 改 短 点 吗 ?,may i have the skirt a little shorter ?,is it included to insure the skirt ?,0.1922,0.2821,28,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.3952
+恐怕 我 吃 不 完 。,i 'm afraid i can n't eat it all .,i 'm afraid i can n't eat it .,0.7956,0.8824,4,1,0.9,10,N/A,N/A,N/A,N/A,N/A,0.8694
+水 怎么样 ?,how 's the water ?,how about the water ?,0.3844,0.7222,5,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.656
+我 明白 了 。,i see .,i see .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+"不 , 我 是 这 纽约 大学 的 毕业班 学生 。","no , i 'm a senior here at nyu .","no , i 'm in this york university of university a university .",0.214,0,39,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.3547
+"我 把 自己 锁 在 饭店 房间 的 外面 了 , 我 还 得 让 他们 开门 。",i locked myself out of the hotel room and had to ask them to unlock the door .,"i locked myself myself on the hotel , and i would like to open them on the hotel .",0.182,0.5256,37,10,0.4444444444444444,18,N/A,N/A,N/A,N/A,N/A,0.5231
+我 叫 noguchi 。,my name is noguchi .,my name is noguchi .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+它 坏 了 。,it does n't work .,it 's broken .,0.1812,0.3889,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.309
+汤里加 一 个 荷包蛋 。,it 's a poached egg in soup stock .,the word and have fried eggs .,0.1496,0.2,28,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.2922
+我 希望 它 还 没有 感染 计算机 病毒 。,i hope it has n't been contaminated with a computer virus .,i hope it 's a major major family .,0.1774,0.3729,37,8,0.3333333333333334,12,N/A,N/A,N/A,N/A,N/A,0.3473
+你们 几 点 关门 ?,what time do you close ?,at what time do you have ?,0.4347,0.7083,7,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6766
+这个 有 粉红色 的 吗 ?,do you have this in pink ?,do you have this for two people ?,0.3656,0.5385,12,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5782
+你 能 擦挡风 玻璃 吗 ?,"would you clean the windshield , please ?",would you clean the windshield ?,0.5698,0.7805,9,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7835
+发动机 起动 不 了 。,the engine will n't start .,we can n't start the time .,0.2473,0.2593,20,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.5107
+是 你 的 。,it 's yours .,that 's your way .,0.2364,0.4615,7,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.5045
+现在 所有 的 商店 都 正在 进行 减价 活动 。,all the stores are having a sale right now .,all the stores are open on sale .,0.298,0.6136,17,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.5834
+我 喜欢 另外 一 种 颜色 。,"i 'd like another color , please .",i like the color that much .,0.2441,0.5294,16,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4412
+我 是 瑞士人 。,i 'm from switzerland .,i come from my own .,0.2626,0.4348,13,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.3767
+节目 什么 时候 结束 ?,what time will the performance end ?,what time does the performance end ?,0.4889,0.8889,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7812
+我 想 再 确认 一下 我 预订 的 这个 星期日 飞往 东京 的 十七 号 航班 。,i 'd like to reconfirm my reservation on flight seventeen to tokyo this sunday .,i 'd like to reconfirm my reservation on flight on tokyo may sunday 's flight .,0.5512,0.6875,25,5,0.6666666666666667,15,N/A,N/A,N/A,N/A,N/A,0.7374
+你 可以 写 一下 昨天 会议 的 摘录 吗 ?,would you write the minutes for yesterday 's meeting ?,could you make out the last work from yesterday ?,0.2765,0.4259,31,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4655
+圆锥杯 。,"cone , please .",it in my bad .,0.1988,0.2,12,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2033
+海事 邮件 要 花 多少 钱 ?,how much is it by sea-mail ?,how much does it cost by sea mail ?,0.2356,0.6786,9,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5959
+我 爱好 冲浪 。,i 'm into surfing .,i 'm so surfing .,0.3365,0.8421,3,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6963
+我 和 我 朋友 的 座位 分开 了 。,my seat is apart from my friend 's .,i 'm with my seat on my friend .,0.2801,0.4722,19,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.5248
+我 想 你 号码 错 了 。,i think you have the wrong number .,i think you 're the wrong wrong .,0.3155,0.7429,9,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6488
+我 不 会 坐 在 酒店 的 房间 里 看 电视 上 的 棒球 比赛 。,i refuse to sit in a hotel room and watch baseball on tv .,i 'm not on a baseball game on the hotel baseball game .,0.277,0.3966,35,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.4356
+"我 不 知道 美国 的 尺码 , 但是 我 的 脚 是 二十三 公分 。","i do n't know the american size , but it is twenty-three centimeters .","i do n't know the american size , but my foot is twenty-third .",0.6263,0.7286,19,4,0.7142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.7336
+"一 个 非 预约 座位 , 谢谢 。","an unreserved seat , please .","a reserved seat , please .",0.5081,0.8966,3,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7533
+"当 我 在 旅馆 检查 它 的 时候 , 发现 了 一 个 缺陷 。",i found a defect when i was looking it over at the hotel .,when i check and what is it one of hotel .,0.1958,0.4483,32,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.4151
+"我 沿着 这 条 路 看 , 玛丽 在 那里 跑步 。","and down the road i look and there runs mary , .",i just just see the road down this road .,0.1844,0.2917,34,11,0.08333333333333343,12,N/A,N/A,N/A,N/A,N/A,0.4335
+别 着 急 慢慢 看 。,take your time .,do n't keep all on your time .,0.2398,0.0625,15,5,0.0,4,N/A,N/A,N/A,N/A,N/A,0.4672
+请 到 二 号 窗口 。,please go to window number two .,please come to the second number two .,0.2724,0.625,12,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5602
+你 能 帮 我 订 个 音乐会 的 票 吗 ?,could you make a reservation for a concert for me ?,could you reserve a ticket for me on the concert ?,0.2798,0.4706,27,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.6131
+有 地铁 吗 ?,is there a subway ?,is there an subway ?,0.3365,0.9474,1,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7695
+他 说 什么 ?,what did he say ?,what did he say ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 能 把 我 的 预订 从 八月 十一日 改到 十二日 吗 ?,can i change my reservation from august eleventh to the twelfth ?,can i make a reservation for the air date on on the twenty-first ?,0.1948,0.5077,32,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4641
+我 在 这里 能 买到 我 相机 的 电池 吗 ?,can i buy batteries for my camera here ?,can i get batteries for my camera here ?,0.6606,0.925,3,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.8241
+明天 有 高级 联赛 协会 的 比赛 吗 ?,is there a major league game tomorrow ?,can i have a game for a game tomorrow ?,0.2153,0.5641,17,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4928
+好 的 。,okay .,all right .,0.2093,0,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.1716
+北 好莱坞 影院 正在 放映 什么 ?,what 's showing at the north hollywood theater ?,what is the north theater in the fourth ?,0.2356,0.4375,27,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.5062
+喂 。,hello .,hello .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.9489
+如果 你 沿着 这 条 路 走 你 会 到 车站 。,if you follow the street you 'll get to the station .,"you should go along the road , you 'll get to the station .",0.4605,0.6604,18,6,0.5,12,N/A,N/A,N/A,N/A,N/A,0.6141
+不 会 用 很 长 时间 的 。,it will n't take long .,it 's not too long for the long time .,0.2573,0,24,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.3458
+你 穿 着 它 正 合适 。,it looks nice on you .,it was easy to fit it .,0.2368,0.2727,16,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.2662
+无论 如何 你 到 这 了 。,"you 're here , anyway .",anything for all or all you .,0.2368,0.0435,22,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.2841
+您 做 这个 生意 多 长 时间 了 ?,how many years have you been in this business ?,how long are you doing for ?,0.1707,0.4043,28,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.2924
+"你 真 好 , 还 打 电话 询问 我 的 病情 。",it 's very kind of you to call to inquire after my health .,"you are very kind to ask , when you make a book .",0.1863,0.3729,37,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.3961
+我 的 眼睛 里 隐隐 作疼 。,i have a dull pain in my ear .,i 've a dull pain in my eyes .,0.4855,0.8333,5,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.734
+"劳驾 , 附近 有 药 店 吗 , 怎么 走 ?","excuse me , but where can i find a drug store ?","excuse me , how do you turn for a store ?",0.2233,0.5532,21,6,0.5,12,N/A,N/A,N/A,N/A,N/A,0.4778
+我 也 不 敢 确定 。,i cannot say for certain .,i 'm not sure .,0.1936,0.4231,15,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.299
+"不 , 它 是 真 牛皮 的 。","no , it 's real cowhide .","no , it 's really real .",0.455,0.68,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6875
+"晚上 好 , 我 能 为 你 做 些 什么 ?",good evening . may i help you ?,good evening . can i help you ?,0.5,0.9355,2,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.7895
+你 想 坐 在 靠 窗户 的 座位 还 是 靠 走廊 的 座位 ?,do you want to sit beside the window or on the aisle ?,would you like to sit seats on the aisle seat or night or the aisle seat ?,0.193,0.3519,35,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.4812
+我 受伤 了 。,i wounded myself .,i 've got a bad .,0.2373,0.2778,13,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2496
+开胃菜 和 一 个 肉 菜 。,"appetizers and a meat dish , please .",appetizers and a meat dish .,0.5698,0.7568,9,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7711
+什么 时候 结帐 ?,what time is the check-out ?,what time is check-out ?,0.3683,0.8571,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7918
+我 结婚 了 。,i 'm married .,i 'm married .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+希望 你 喜欢 。,i hope you like it .,you like it you like .,0.3276,0.4,12,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.6231
+我 把 外套 忘 在 酒店 的 壁橱 里 了 。,i left my coat in the closet of the hotel .,i left my coat in the hotel room .,0.529,0.6512,15,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.703
+我 会 试试 。,i 'll try it .,i 'll try it .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 要 两 张 星期四 猫 的 票 。,"i would like two tickets for "" cats "" , for this thursday .",i 'd like two tickets on chanel fourth .,0.1421,0.5254,28,9,0.3571428571428571,14,N/A,N/A,N/A,N/A,N/A,0.4515
+能 带 我 到 这个 地址 吗 ?,can you take me to this address ?,can you take me to this address ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+请 给 我 来 些 巧克力 饼干 。,"i 'd like some chocolate chip cookies , please .","i 'd like some chocolate , please .",0.5385,0.7292,13,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.7433
+"等 我 有空 的 时候 , 我 会 给 你 打 电话 。",i 'll give you a ring when i 'm free .,"well , i 'll call you right right and when it was free .",0.2425,0.3158,26,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4361
+有 到 这个 海角 末端 的 公共 交通 工具 吗 ?,is there public transportation that runs all the way to the tip of the cape ?,is there a public bus to reach july ?,0.1082,0.3247,52,12,0.25,16,N/A,N/A,N/A,N/A,N/A,0.356
+我 的 珠宝 被 偷 了 。,my jewelry was stolen .,my passport was stolen .,0.3844,0.6957,7,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.5992
+我 想 要 个 有 两 张 床 的 房间 。,i 'd like a room with twin beds .,i 'd like a room with twin beds .,1.0,1.0,0,0,1.0,9,N/A,N/A,N/A,N/A,N/A,0.9489
+这个 事故 造成 了 交通 堵塞 。,the accident backed up traffic .,this accident is red in traffic in traffic .,0.2073,0.4062,19,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.4553
+一 个 头等舱 的 无烟 的 座位 。,"a first-class , non-smoking seat , please .","a first seat seat , please .",0.3768,0.5814,18,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.5576
+你 坐 公共 汽车 去 比较 好 。,it 's better for you to take a bus .,you can take a bus by bus .,0.2348,0.3056,25,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4767
+"我们 一起 吃 , 请 再 拿 个 叉子 。","we 'll eat it together , so please bring an extra fork ?",we 'll eat another fork .,0.102,0.3929,34,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.4294
+什么样 的 疼 ?,what kind of pain ?,what 's it is ?,0.2364,0.5263,9,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.3362
+到 丹佛 要 多少 钱 ?,how much is it to denver ?,how much does it cost to denver ?,0.3155,0.6923,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6822
+两 张 巡航 的 票 。,two tickets for the cruise .,"two tickets for a child , please .",0.2576,0.5714,12,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.5441
+"星期一 不 营业 , 但是 其他 时间 都 营业 。","it is closed on mondays , but a different day should be okay .","business is n't open , but it 's open ?",0.1428,0.2742,45,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.3112
+我 能 用 这个 证件 吗 ?,can i use this pass ?,can i use this id ?,0.5373,0.8095,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7417
+听 新闻 了 吗 ?,hear the news ?,did you listen to see a stop ?,0.1982,0,23,7,0.0,4,N/A,N/A,N/A,N/A,N/A,0.1945
+我 的 房间 太 冷 了 。,my room is too cold .,the room is too cold .,0.7598,0.8571,3,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8022
+"经济 舱位 , 谢谢 。","business class , please .","economy class , please .",0.6687,0.72,7,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6725
+修好 了 请 通知 我 。,let me know when it 's ready .,please tell me the announcement .,0.17,0.2333,23,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.291
+我 想 让 把 这个 翻译 过来 。,i 'd like to have this translated .,i 'd like this paper up with this paper .,0.2276,0.4571,19,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4615
+不 用 谢 。,you 're welcome .,you 're welcome .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+请 尽快 给 我 发电子 邮件 。,please send me e-mail as soon as possible .,"send as as as as as as possible , please .",0.2264,0.3721,27,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.5335
+请 来 同样 的 。,"the same , please .","the same please , please .",0.3833,0.6316,7,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7443
+我 想 参加 课程 。,i 'd like to take lessons .,i 'd like to take the course .,0.5411,0.7407,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6599
+能 找 下 史密斯 先生 吗 ?,can i talk to mr. smith ?,can i speak to mr. smith ?,0.4889,0.84,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.745
+我 想 要 些 不 含 酒精 的 饮料 。,i 'd like some nonalcoholic drink .,i want some drink without the alcohol .,0.2803,0.2,28,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.4765
+"他们 可以 租借 球棒 , 一 整 套 十 美元 , 但是 鞋子 我 不 太 肯定 。","they have the rental clubs costing ten dollars per a full set , but i 'm not sure about the shoes .","they did have this clubs club , but i can n't make any clubs to come in ten dollars for me .",0.1586,0.3232,67,19,0.1363636363636364,22,N/A,N/A,N/A,N/A,N/A,0.4604
+今晚 有 女士 的 床位 吗 ?,do you have a bed for females tonight ?,do you have any lady for tonight ?,0.2785,0.6667,13,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.613
+"饭后 , 请 和 甜点 一起 上 。","after dinner , with the dessert , please .","after order dessert , please .",0.3259,0.6429,15,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.6101
+多少 钱 ?,what 's the price ?,how much ?,0.1074,0.2632,14,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.184
+不 用 找 了 。,you may keep the change .,keep the change .,0.6065,0.68,8,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7081
+我 租 鞋子 和 球拍 吗 ?,can i rent shoes and a racket ?,do i rent a racket and a racket ?,0.3549,0.6774,10,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6292
+你 的 姓名 标签 贴 在 你 的 行李 上 吗 ?,is your name tag attached to your luggage ?,your name tag are swollen ?,0.1987,0.4884,22,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4488
+我 想 预订 二一五 次 航班 。,i 'd like to make reservations on flight two one five .,i 'd like to make a reservation on flight two four .,0.4367,0.8182,10,4,0.6666666666666667,12,N/A,N/A,N/A,N/A,N/A,0.7268
+现在 就 上 茶 吗 ?,would you like your tea now ?,will it be tea on now ?,0.2302,0.4483,16,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3781
+"一 杯 可乐 , 谢谢 。","a coke , please .","a coke , please .",1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+"谢谢 , 不 用 找 了 。",thank you . keep the change .,thank you . will keep the change .,0.5,0.8276,5,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8107
+"好 的 , 现在 清楚 了 。","okay , it 's clear now .","okay , it 's clear to be sure now .",0.4518,0.5417,11,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6931
+哪 的 座 最 好 ?,which is the best seat ?,which seat is best ?,0.2434,0.5833,10,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6835
+这 是 去 爱丁堡 的 车 吗 ?,does this car go to edinburgh ?,does this train go to edinburgh ?,0.4889,0.871,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7674
+相同样子 的 有 黑色 的 吗 ?,do you have the same thing in black ?,is there a black one ?,0.1439,0.2973,26,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.3493
+儿童 用品部 在 哪 ?,where is the children 's department ?,where 's the children 's ?,0.2932,0.6757,12,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6553
+拿 错 菜 了 。,that 's the wrong entree .,it 's the wrong dish .,0.3276,0.6538,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6005
+"请 在 这 张 纸上 写下 你 的 酒店 名称 和 电话 号码 , 我们 好 和 你 联系 。","please put down your hotel name and telephone number on this paper , so we can contact you .","please put out this hotel and phone number , and you can contact you ready .",0.1763,0.5761,39,10,0.4736842105263158,19,N/A,N/A,N/A,N/A,N/A,0.5957
+"看到 交通 事故 , 我 感到 很 惊讶 。",i was surprised at seeing a traffic accident .,i really had a great like .,0.1969,0.3043,32,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.257
+是 我 个人 用 的 。,it is for my personal use .,it 's for my personal use .,0.6435,0.963,1,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8265
+请 来 瓶 熟 啤酒 。,"a bottle of lager , please .","a beer for beer , please .",0.2876,0.6429,10,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5105
+我 浑身 发痒 。,i feel itchy all over my body .,i hit my family .,0.1436,0.3226,21,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.2981
+你 看清 嫌疑犯 的 样子 了 吗 ?,did you get a good look at the suspect ?,do you know the same style ?,0.1707,0.375,25,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.3327
+我 想 这个 不 对 。,i do n't think this is right .,i think this is not right .,0.3053,0.6333,11,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.7086
+塔希提岛 。,the tahiti island .,it in my bad .,0.1988,0.3158,13,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2429
+你 得 支付 附加费 。,you will have to pay an extra charge .,you have to pay an extra charge .,0.7673,0.8684,5,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.8404
+让开 。,get out of the way .,it in my bad .,0.1628,0.35,13,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.2121
+恐怕 我 会 错过 我 的 航班 。,i 'm afraid i 'll miss my flight .,i 'm afraid i can n't miss my flight .,0.5254,0.7941,7,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.7454
+走开 。,get out .,go away .,0.2093,0.3333,6,2,0.3333333333333334,3,N/A,N/A,N/A,N/A,N/A,0.2266
+所以 每 人 四千 日元 。,so it 's four thousand yen each .,so take one hundred yen in one thousand yen .,0.213,0.1212,29,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4311
+你 能 给 我 指出 这个 座位 的 大概 位置 吗 ?,"can you show me where the seat is on a plan , please ?",can you show me about this seat in this ?,0.1949,0.5556,24,8,0.4285714285714286,14,N/A,N/A,N/A,N/A,N/A,0.4977
+你 带 了 多少 钱 ?,how much money were you carrying ?,how much do you charge for ?,0.2473,0.5294,16,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.4763
+"好 的 , 给 你 。","okay , here you are .",yes . you .,0.1411,0.381,13,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.3139
+"如果 他 能 见 你 , 我 会 帮 你 告诉 他 的 。",i 'll call him for you if he 's able to see you .,"if i meet you , if i meet you to help me .",0.277,0.3469,32,11,0.2142857142857143,14,N/A,N/A,N/A,N/A,N/A,0.3773
+我 要 听 一下 。,i want to listen to you .,i want to listen .,0.474,0.72,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7391
+"这 是 被 保险 的 , 是 吗 ?","it is insured , is n't it ?",this is an insurance ?,0.1297,0.3704,17,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3882
+缆车 什么 时候 停止 ?,what time do the lifts stop ?,what time do the lift leave ?,0.4347,0.7931,6,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6996
+你 什么 时候 可以 来 看看 。,you should come and visit some time .,when you have a look at you while you 're look .,0.229,0.1081,33,10,0.0,8,N/A,N/A,N/A,N/A,N/A,0.2587
+非常 感谢 你 。,thank you very much .,thank you very much .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+在 下 个 信号 灯 停 。,"stop at the next signal , please .",stop at the next signal .,0.5698,0.7353,9,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7597
+换 钱 处 在 哪里 ?,where 's the exchange office ?,where is the exchange stand ?,0.2633,0.7667,7,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.628
+"如果 死者 是 佛教徒 , 就 是 这样 。","if the person was a buddhist , yes .","in the plane , the date of the date , it 's .",0.2515,0.2778,26,10,0.0,9,N/A,N/A,N/A,N/A,N/A,0.316
+我 回到 旅馆 的 房间 后 发现 这里 有 一 个 破缝 。,i went back to my hotel room and found a tear here .,i will found this room with a room after the room .,0.265,0.3654,33,11,0.15384615384615385,13,N/A,N/A,N/A,N/A,N/A,0.4013
+"你 好 , 这里 是 联合 航空 公司 。",hello . this is united airlines .,"hello , this is united airlines united airlines .",0.3928,0.4848,17,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6575
+这 是 你 第一 次 坐 飞机 吗 ?,is this your first time on a plane ?,is this your first train by the plane ?,0.3549,0.75,9,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.657
+你 是 什么 意思 ? 你 现在 说 英语 。,what do you mean ? you are speaking english now .,what you mean ? you mean english .,0.2733,0.6735,16,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.6101
+是 的 。 我 有 两 盒 烟 。,"yes , i have two cartons .",yes . i have two cartons of cigarettes .,0.3303,0.4231,15,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6292
+坐 特快 要 多付 多少 钱 ?,and how much more do we have to pay for the express ?,how much is the express express ?,0.1461,0.4717,28,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.4559
+马上 。,"right away , please .",right away .,0.2178,0.5714,9,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.615
+"不 提供 不 必要 的 服务 , 但 有点 让 人 害怕 。","no frills , but a few thrills .",it is not necessary to drink if you have a little custom .,0.2273,0,44,11,0.0,8,N/A,N/A,N/A,N/A,N/A,0.2256
+现在 采取 什么样 的 行动 最 好 ?,what would be the best course of action to take ?,what is the best thing in what 's now is the best ?,0.1903,0.3265,33,10,0.09090909090909094,11,N/A,N/A,N/A,N/A,N/A,0.3848
+"那么 很 遗憾 , 我们 不 能 办理 。","then , unfortunately we can n't do the procedure .",that 's all i can n't have to do it here .,0.197,0.38,31,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.366
+我们 要 晚点 到达 了 。,our arrival will be delayed .,we are delayed .,0.1571,0.4828,15,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4402
+我们 能 赶上 火车 吗 ?,can we make the train ?,can we get to the next train ?,0.2943,0.5217,11,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5514
+你 要 什么 甜点 ?,what will you have for dessert ?,what do you want ?,0.1754,0.4375,18,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.383
+在 出口 前面 。,in front of the exit .,it 's in front of the exit .,0.6804,0.7273,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7899
+对不起 。,excuse me .,excuse me .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+你 能 把 它 寄到 日本 吗 ?,could you send it to japan ?,can you send it to japan ?,0.8091,0.8571,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7959
+"库米 , 站 得 离 他 近点 。","kumi , stand near him .",from my own speaking thing by the stop .,0.1969,0,28,8,0.0,6,N/A,N/A,N/A,N/A,N/A,0.2269
+"几 年 前 , 冬季 奥运会 在 长野 举行 。",the winter olympics were held in nagano several years ago .,"it 's held in the few years ago , and death is held .",0.2425,0.2542,44,11,0.0,11,N/A,N/A,N/A,N/A,N/A,0.4275
+我 想 jennie 比较 近 并且 它 是 一 间 好 的 商店 。,i think jennie 's is close and is a nice store .,i think i have an place and it is a good shop and is a good shop .,0.1735,0.2917,34,11,0.08333333333333343,12,N/A,N/A,N/A,N/A,N/A,0.4084
+让 我 查查 时刻表 。,i 'll check the timetable .,let me check the timetable .,0.5081,0.7778,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.7125
+那 就 是 我 的 腿碰 了 你 。,that 's only my leg that hit you .,that 's the thing i 've been in .,0.2073,0.3824,21,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3676
+我们 已经 很 长 时间 没有 见面 了 。,it 's been ages since we last met .,we 're already getting up more time .,0.208,0.2857,25,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.2926
+"我 不 知道 , 但是 我 想 验光单 上 度数 比较 大 。",i do n't know but i think they are a stronger prescription .,"i do n't know , but i 'd like the prescription for what i think .",0.2131,0.5167,29,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.6077
+包里 有 我 的 钱包 和 信用卡 。,my wallet and credit cards are in the bag .,i have my wallet with my wallet .,0.1696,0.2791,31,9,0.1,10,N/A,N/A,N/A,N/A,N/A,0.3539
+"京都 是 纯粹 的 中 世纪 日本 风格 , 有 丰富 的 历史 纪念碑 , 寺庙 , 神殿 和 遗迹 。","kyoto is sheer medieval japan , teeming with historical monuments , temples , shrines , and spots .","kyoto was in the old century century , most of the college , the buddhist japan , george and as japan .",0.1735,0.2424,75,16,0.11111111111111115,18,N/A,N/A,N/A,N/A,N/A,0.3761
+我 想 拿 一 个 潜水 许可证 。,i 'd like to get a diving license .,i would like to get a license for scuba diving .,0.279,0.3143,24,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.6726
+你 不 可能 看 不 到 。,you can n't miss it .,you can n't see it .,0.3833,0.8095,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.689
+"包括 早餐 , 税 和 服务费 , 每 人 每 晚 四十五 美元 。","including breakfast , tax , and service charge , it would be forty-five dollars per person per night .","the breakfast , tax and service charge for an hundred dollars per night .",0.2619,0.5784,43,9,0.5263157894736843,19,N/A,N/A,N/A,N/A,N/A,0.5885
+你 吃 了 这 种 药 后 觉得 犯困 吗 ?,do you feel drowsy after taking this medicine ?,do you eat this medicine for this than bed ?,0.2679,0.4043,28,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.5048
+我 能 预约 明天 吗 ?,can i make an appointment for tomorrow ?,can i make an appointment for tomorrow ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+这个 灯 不 亮 了 。,the light is n't working .,the lights does n't work .,0.2626,0.7308,7,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6027
+出租车 。,taxi .,taxi .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.9489
+你 可以 步行 去 那儿 。,you can walk there .,you can walk there .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+"我们 选择 吃 白面包 , 黑面包 还 是 全麦面包 。","we have a choice of white , rye and whole wheat bread .","in we wear a choice of white , they are also also .",0.3146,0.5091,27,7,0.4615384615384615,13,N/A,N/A,N/A,N/A,N/A,0.5255
+两 个 成人 的 一 个 儿童 的 。,"two adults and one child , please .",two adults for a child 's .,0.2144,0.6286,13,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5111
+"哈哈 , 一定 要 这么 做 。","ha-ha , be sure to do so .","however , must you may do that .",0.2608,0.1923,21,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3151
+在 哪 能 买到 民间 手工 艺品 ?,where can i buy folkcraft goods ?,where can i buy folk goods ?,0.4889,0.8485,5,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7768
+文具 商店 在 哪里 ?,where is the stationery store ?,where 's the stationery shop ?,0.2633,0.871,4,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6781
+我 真的 不 知道 要 做 什么 。,i really do n't know what to do .,i really do n't know what .,0.6319,0.8182,6,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.8111
+让 我 查查 制动液 和 发动机 。,let me check the brake fluid and the engine .,let me check with a hard and keep .,0.2216,0.5778,19,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.4741
+有 可能 把 卧室 重新 粉刷 一下 吗 ?,is it possible to have a new coat of paint in the living-room ?,is there a special safe to go in a lot ?,0.2209,0.3333,42,10,0.2857142857142857,14,N/A,N/A,N/A,N/A,N/A,0.3385
+请 给 我 来 麦片粥 。,"i 'd like cereal , please .","i 'd like a little speaking , please .",0.3666,0.4815,14,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5633
+我 想 要 张光盘 。,i 'd like a compact disk .,i 'd like a compact car .,0.6435,0.8462,4,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7773
+火车 经过 el paso 吗 ?,does this train pass through el paso ?,does this train go to the train by seattle ?,0.2153,0.4737,20,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4608
+请 给 我 幻灯片 。,"film for slides , please .","i 'd like a slide film , please .",0.2342,0.4231,15,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.5337
+"对不起 , 饭店 里 没有 。","i 'm sorry , there is n't one in the hotel .","i 'm sorry , but there is no mistake in the hotel .",0.425,0.7273,12,3,0.75,12,N/A,N/A,N/A,N/A,N/A,0.7111
+是 的 。,yes .,yes .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.8632
+我 想 用 邮件 快递 发 这个 。,i 'd like to send this by special delivery .,i 'd like to send this by special delivery .,1.0,1.0,0,0,1.0,10,N/A,N/A,N/A,N/A,N/A,0.9489
+有 什么 喝 的 吗 ?,can i get something to drink ?,do you have anything to drink ?,0.2676,0.5333,14,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5039
+我 想 逛 商场 。,i 'd like to go shopping .,i want to change at the mall .,0.2608,0.1538,22,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.2859
+用 这 张 卡 能 享受 优惠 吗 ?,can i enjoy the privilege of discount with this card ?,"can use a table with this card , please ?",0.206,0.3148,37,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4449
+请 送 我 去 医院 。,"take me to the hospital , please .",please take me to a hospital .,0.2759,0.4412,19,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6846
+我 有 四 瓶 威士忌 。,i have four bottles of whisky .,i have four bottles of whisky .,1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+"哦 , 不 , 真的 吗 ?","oh no , really ?","oh , no , really ?",0.5373,0.875,2,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.8062
+请 把 这个 十 美元 的 美钞 给 我 破 一下 。,"i 'd like change for a ten dollar bill , please .",please exchange this for ten dollars for me .,0.1995,0.4286,28,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4875
+飞机 五 分钟 以前 关闭 了 。,that flight closed five minutes ago .,the plane will be five minutes ago .,0.3457,0.6486,13,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5347
+可能 还 有 我们 没有 考虑 到 的 可能性 。,there may be other possibilities that we have n't considered yet .,but we will n't get any possibility to arrive in my family house .,0.2496,0.3182,45,13,0.0,12,N/A,N/A,N/A,N/A,N/A,0.3846
+这个 城镇 最 热闹 的 街道 在 哪里 ?,where is the busy street in this town ?,what is the most street in this town ?,0.5133,0.8462,6,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.705
+我 头痛 。,i have a headache .,i have a headache .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+这些 正 是 我 一直 想 要 的 。,these things are just what i 've always wanted .,these are just this as i want to order .,0.2253,0.4583,26,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.4994
+我 有 一 颗 龋齿 。,i have a decayed tooth .,i have a sharp pain .,0.3276,0.5417,11,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.4627
+我 把 相机忘 在 出租车 上 了 。,i left my camera in the cab .,i left my camera in the taxi .,0.7071,0.8966,3,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.807
+好 的 。,right .,all right .,0.3706,0.4286,4,1,0.5,2,N/A,N/A,N/A,N/A,N/A,0.618
+您 要 茶 还 是 咖啡 ?,would you like tea or coffee ?,would you like tea or coffee ?,1.0,1.0,0,0,1.0,7,N/A,N/A,N/A,N/A,N/A,0.9489
+"如果 你 有 的话 , 那 会 非常 好 。",that would be great if you could .,it would be very good if you would be very well .,0.2477,0.2647,25,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4682
+请 做 完全 熟 。,"medium-well , please .","please speak to speak to make a full , please .",0.1858,0,31,8,0.0,4,N/A,N/A,N/A,N/A,N/A,0.3605
+有 城市 之 旅 吗 ?,is there a tour of the city ?,is there a city tour tour ?,0.2759,0.5172,14,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6648
+真的 还 是 仿制 的 ?,pure or imitation ?,is it an fish ?,0.1988,0.2632,14,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2436
+"如果 我 现在 定购 它 , 你 可以 把 它 送到 日本 吗 ?",could you send it out to japan if i order it now ?,"if i take it , would you send it to japan that i am ?",0.2284,0.32,34,11,0.15384615384615385,13,N/A,N/A,N/A,N/A,N/A,0.5854
+你 想要 更 多 吗 ? 这 是 餐后 甜点 菜单 。,you want more ? here 's the dessert menu .,how would you like more more ? this is a little menu .,0.2393,0.2381,32,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4033
+我 能 用 我 的 美国 快递卡 支付 吗 ?,can i pay with my american express ?,can i pay with my american express card ?,0.7506,0.8611,5,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8646
+请 给 我 来 杯 矿泉水 。,"i 'd like mineral water , please .","i 'd like mineral water , please .",1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 今天 我 会 去 你 说 的 第一 家 。,i think today i 'll go to the first one you mentioned .,i think i 'll call to your first home .,0.2159,0.4909,28,6,0.5384615384615384,13,N/A,N/A,N/A,N/A,N/A,0.4935
+"请 把 它 放 在 你 前面 的 座椅 下面 , 或者 你 上面 的 架子 上 。","please put it under the seat in front of you , or on the shelf above you .",please put it in front of the seat on the seat on the seat on the overhead shelf .,0.2695,0.4865,38,12,0.3333333333333334,18,N/A,N/A,N/A,N/A,N/A,0.5885
+请 填 这些 合同 。,please fill out these contract .,please fill out the contract .,0.3833,0.9375,2,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8207
+好 的 。,okay .,all right .,0.2093,0,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.1716
+所以 我 只 需 在 上面 签名 ?,so i just sign it ?,so i 'll just sign on a signature on a signature ?,0.2477,0,31,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.4166
+这 附近 没有 电话亭 。,there is no telephone booth around here .,there is no public booth here here .,0.3155,0.6341,15,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.5914
+我 曾经 被 指派 到 你们 公司 芝加哥 的 分部 。,i 've been assigned to your company 's chicago branch .,i used to be in the company in your company .,0.2163,0.4182,32,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4535
+"对不起 , 打扰 一下 。",excuse me .,excuse me .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 把 它 这里 放宽 一 寸 。,i 'd like it let out an inch here .,"i 'd like it one inch here , i think .",0.29,0.4571,19,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.6118
+你 想要 什么 调料 吗 ?,would you like anything on it ?,"what do you want , but ?",0.2368,0.3871,19,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.2949
+我 让 服务员 用 万 能 钥匙 打开 。,i 'll have the bellboy open the door with the master key .,let me have the bellboy open with the master key .,0.49,0.7414,15,4,0.6923076923076923,13,N/A,N/A,N/A,N/A,N/A,0.7295
+这 条 线 的 第一 站 是 那 ?,what 's the first station on this line ?,what is the first stop at the line stop ?,0.2253,0.65,14,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.5606
+我们 还 想 尝尝 你们 的 特色菜 。,and also we 'd like to have your speciality .,we want to try your special food .,0.2183,0.4444,25,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4448
+我 该 把 行李 放 哪 ?,where can i put my baggage ?,where shall i put my luggage ?,0.3041,0.7857,6,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6201
+三 片 干酪 比萨饼 。,"three slices of cheese pizza , please .","three cheese of cheese , please .",0.3053,0.7179,11,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6451
+我 想 要 一些 洗涤粉 。,i 'd like some washing powder .,i 'd like some shaving lotion .,0.4347,0.7097,9,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6021
+"是 的 , 我 三 年 前 去 过 那里 。","yes , i went there three years ago .","yes , i have to been there by three years ago .",0.317,0.6389,13,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.651
+我 想 要 本 说明书 。,i 'd like to receive a brochure .,i 'd like a tie .,0.2482,0.4545,18,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.4974
+吃完 比萨 后 我 可以 帮 你 做 作业 。,i can help you with your homework after we have some pizza .,i can help you do the face with your business .,0.2418,0.4333,34,8,0.3846153846153846,13,N/A,N/A,N/A,N/A,N/A,0.4964
+你 有 那 个 症状 多 长 时间 了 ?,how long have you been having that symptom ?,how long have you been been able to have that symptoms ?,0.3448,0.6136,17,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.6585
+"对不起 , 都 满 了 。","sorry , the house is full .","sorry , that 's full .",0.2651,0.7037,8,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5674
+维修 人员 马上 就 到 。,a maintenance person will be up shortly .,our engineer will be right away .,0.1995,0.4146,24,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3689
+你们 有 什么 治 头痛 的 药 ?,what do you have for a headache ?,what kind of headache do you have a headache ?,0.3502,0.3636,21,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6307
+两百 。,two hundred .,two hundred .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+恐怕 不 可以 。,i am afraid not .,i 'm afraid i can n't .,0.2621,0.5294,8,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.4876
+在 水街 。,it 's on water street .,in my house .,0.1187,0.3043,16,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.1966
+"成人 票 三 元 一 张 , 儿童 票 两 元 一 张 。",three dollars for adults and two dollars for children .,"for adults yen for a stamp , tickets for children .",0.2336,0.4909,28,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4991
+请 把 这 钱 兑换 成 美元 。,please exchange this money into dollars .,change this money to exchange dollars .,0.311,0.5366,19,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.6702
+你 可以 和 我 一起 去 找 我 的 面具 吗 ?,will you go and look for my mask with me ?,would you been looking for my job to my house ?,0.2045,0.4524,23,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4027
+港务局 是 九 美元 五十 美分 。,the port authority is nine dollars fifty cents .,the total is nine dollars and fifty cents .,0.381,0.6875,15,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.6616
+请 稍等 。,"just a moment , please .","just a moment , please .",1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+星期五 晚上 九点 。,"friday night , at nine .","it 's at nine p.m. , please .",0.234,0.1667,20,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.414
+报警 。,call the cops .,call the police .,0.2866,0.6667,5,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.5972
+今年 很 流行 白色 。,white is very popular this year .,these is very popular this year .,0.8091,0.9091,3,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8258
+我 有 预约 。,i have a reservation .,i have a reservation .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+请 给 我 看下 那 个 。,please show me that one .,"show me that , please .",0.3464,0.44,14,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6934
+所有 的 票 都 卖 完 了 。,all the tickets were sold out .,all are all sold out .,0.2773,0.5484,14,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4856
+这里 有 旅游 信息 事务所 吗 ?,are there any tourist information office in this town ?,is there an information information here ?,0.1707,0.4909,28,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.4762
+谢谢 。,thank you .,thank you .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+请 接受 我 衷心 的 吊唁 。,please accept my sincere condolences .,please accept my in my own area .,0.2576,0.6316,14,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.5131
+日本 名古屋 。,"to nagoya , japan .",japan are love .,0.1812,0.2632,14,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.3673
+我 想 带 回家 。,i 'd like to take it home .,i want to take home home .,0.2696,0.5926,11,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.5486
+通常 一 年 五 到 六 次 。,usually around five or six times a year .,nine years is a year .,0.1849,0.4146,24,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3546
+我 想 要 带 后跟 的 橡胶底 的 。,i 'd like them soled and heeled .,i 'd like something made with a little with help .,0.1997,0.1212,29,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.381
+挪开 。,move over .,"men 's , please .",0.1988,0,12,4,0.0,3,N/A,N/A,N/A,N/A,N/A,0.1989
+请 明天 早上 六点 电话 叫醒 我 。,please wake up call at six o 'clock tomorrow morning .,could you give me a wake-up call at six tomorrow morning .,0.2919,0.5185,26,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.5871
+我 能 把 行李 放 在 机舱 里 吗 ?,can i leave the baggage in the cabin ?,can i put my luggage in the area ?,0.2801,0.6316,14,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5105
+真 是 一 顿 美餐 。,it was an excellent dinner .,it was a nice meal .,0.245,0.5,14,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4028
+"你 想要 哪 个 , 汤 还是 色拉 ?","which would you like , soup or salad ?","which would you like , with salad or salad ?",0.5254,0.7632,9,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.7327
+请 告诉 我 最 近 的 地铁站 在 哪 。,please tell me where the nearest railroad station is .,please tell me where the nearest subway station is .,0.658,0.8704,7,1,0.9,10,N/A,N/A,N/A,N/A,N/A,0.7958
+他 去年 夏天 去 的 洛杉矶 。,he went to los angeles last summer .,he is going to los angeles last year .,0.3303,0.6667,12,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6205
+我 想 参加 一 个 观光 旅游团 。,i 'd like to join a sightseeing tour .,i 'd like to take a sightseeing tour .,0.5969,0.8947,4,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.7988
+这 趟 火车 上 有 餐车 吗 ?,is there a dining car on this train ?,is this a car car on this train ?,0.4855,0.7568,9,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.6695
+你 有 地铁 线路 图 吗 ?,do you have a map of the underground ?,do you have a subway map ?,0.3419,0.4474,21,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5474
+"如果 你 今晚 有空 , 我 想 请 你 出去 吃饭 。","i 'd like to take you out to dinner , if you 're free tonight .","i 'd like to take you tonight is much , i 'd like to have your meal out .",0.2902,0.4286,36,11,0.3125,16,N/A,N/A,N/A,N/A,N/A,0.5742
+我 能 要 一 个 吗 ?,can i try one ?,can i have one ?,0.3365,0.7333,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.5976
+服务员 会 尽快 做好 。,the maid will do it as soon as possible .,the bellboy will be ready soon .,0.1835,0.3659,26,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.3882
+我们 最好 现在 找 一下 联合 航空 公司 的 柜台 。,we had better find the united airlines counter right now .,we are looking right to the united counter now .,0.2637,0.4483,32,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.5443
+我们 好 的 艺术品 感 兴趣 。,we 're interested in fine arts .,we 're interested in architecture .,0.4548,0.6875,10,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6679
+你 能 给 我 再 拿 一 个 吗 ?,could you give me another one ?,will you bring me another one ?,0.4347,0.7419,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6314
+这个 价格 太 高 了 。,the price is too high .,this is too high .,0.5475,0.7391,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6371
+"如果 您 能 等一会儿 的话 , 我 会 回答 您 所有 的 问题 。","if you could wait just a moment , i will answer any questions you have .",if you can wait a while if i could give you my question .,0.19,0.4306,41,10,0.375,16,N/A,N/A,N/A,N/A,N/A,0.5019
+我 来 这里 之前 去 了 迈阿密 。,i went to miami before coming here .,i have going to miami the time before miami .,0.2253,0.3056,25,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4971
+"有很多 种 类 , 但是 最 受 欢迎 的 是 淡 粉色 的 , 它 的 盛开 让 日本人 很 有 感触 。","there are many varieties , but the most popular one is light pink , and its blossoms make the japanese emotional .","it 's a popular view of it but , so fish , it 's good popular .",0.2068,0.2719,83,19,0.1363636363636364,22,N/A,N/A,N/A,N/A,N/A,0.2992
+我 要 个 带 浴室 的 单人间 。,i 'd like a single with bath .,i 'd like a single room with a bath .,0.4671,0.7667,7,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7626
+我 现在 付款 吗 ?,do i pay now ?,do i have now ?,0.3365,0.7857,3,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.582
+这 附近 有 地铁站 吗 ?,is there a subway station near here ?,is there a subway station near here ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+我 没有 足够 的 硬币 。,i do n't have enough extra coins .,i do n't have enough coins .,0.613,0.8235,6,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8027
+百货 商店 在 哪 ?,where is the department store ?,where is the department store ?,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+现在 他 已经 很 糟糕 了 。,now he has goofed it .,he 's already bad now .,0.2626,0.1818,18,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.3322
+请 转寄 我 的 信件 。,please forward my mail here .,please send my parcel .,0.2142,0.5517,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4428
+咖啡馆 在 哪 ?,where is the cafe ?,where is the cafe ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 不 能 回答 这个 问题 。,i can n't answer this question .,i can n't get this wrong .,0.3041,0.625,12,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.5442
+现在 不 用 了 。,not now .,now it is n't working .,0.2373,0,15,5,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2893
+能 晚点 结帐 吗 ?,can you give me a late check-out ?,could you have my hands up later ?,0.2357,0.3529,22,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3672
+"我 叫 miki oda , 我 的 航班 是 飞往 范库弗峰 的 jal零一二 航班 。",my name is miki oda and the flight number is jal zero one two bound for vancouver .,"my name is miki kimura , and my flight is been on one flight .",0.165,0.4699,44,10,0.4444444444444444,18,N/A,N/A,N/A,N/A,N/A,0.4788
+我们 马上 给 您 送来 。,we 'll have it back to you soon .,we 'll bring it to you in a minute .,0.2804,0.3939,20,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4999
+去 中央 公园 个 车站 在 哪 ?,where is the bus stop for the central park ?,which station does the bus for central park ?,0.2567,0.5227,21,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.5989
+你们 一共 几 位 ?,how many in your party ?,how many are in your few ?,0.311,0.625,9,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6473
+通宵 药店 在 哪 ?,where 's the all-night chemist 's ?,where 's the emergency office ?,0.2773,0.4857,18,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4659
+好好 休息 几 天 。,take a rest for a few days .,it 's a few days to rest for a few days .,0.4336,0.5,14,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.6183
+绝好 的 建议 。,that 's wonderful suggestion .,let 's suggest .,0.1812,0.4667,16,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.4364
+请 叫 个 医生 。,please call a doctor .,"call a doctor , please .",0.3464,0.2727,16,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.7517
+是 个 很 好 的 风景画 展览 。,it has a fine collection of landscape paintings .,it has a great collection of one old .,0.2868,0.5714,21,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.5532
+请 你 把 胡椒粉 递给 我 好 吗 ?,"will you pass me the pepper , please ?",will you please pass me a pepper ?,0.2825,0.5,19,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.7228
+roppongi 以 它 的 夜生活 而 闻名 。,roppongi is well-known for its night-life .,women is famous for its work .,0.2473,0.4186,25,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4053
+"你 的 房间 号码 是 一五零一 , 在 十五 层 。","your room number is fifteen o one , on the fifteenth floor .",your room number is one . the number is zero fifteen the five floor .,0.2165,0.55,27,8,0.3846153846153846,13,N/A,N/A,N/A,N/A,N/A,0.6122
+那 是 一 个 不错 的 价格 。,that 's a good price .,that was a nice price .,0.2633,0.7273,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5431
+你 能 推荐 个 买 皮革 包 的 好 商店 吗 ?,could you recommend a good shop to buy leather bags ?,could you recommend a good shop where i can buy a leather store ?,0.3872,0.6604,18,5,0.5454545454545454,11,N/A,N/A,N/A,N/A,N/A,0.6753
+这个 葡萄酒 有 瓶塞 的 味道 。,this wine tastes of cork .,there 's a in in this wine .,0.2178,0.2308,20,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.4268
+"对不起 , 我 很 着急 。","sorry , i 'm in a hurry .","sorry , i have a hurry .",0.3902,0.8,5,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6719
+还 有别 的 费用 吗 ?,are there any other charges ?,do you have any other extra charge ?,0.2178,0.4483,16,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.5034
+我 都 去 。,i do both .,i have all right .,0.2364,0,12,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.2288
+"什么 是 "" chiliconcarne "" ?","what is this "" chili con carne "" ?","what are "" means "" ?",0.1597,0.4118,20,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.3729
+我 想 租 一 个 礼拜 的 车 。,i 'd like to hire a car for a week .,i 'd like to rent a ski car .,0.2749,0.5833,15,5,0.5454545454545454,11,N/A,N/A,N/A,N/A,N/A,0.5608
+"我 昨天 在 这里 买 了 这个 , 但是 它 上面 有 一 个 污点 。","i bought this here yesterday , but there was a stain on it .","i bought this yesterday , but it 's a stain here .",0.304,0.7167,17,5,0.6428571428571428,14,N/A,N/A,N/A,N/A,N/A,0.7068
+这个 超重 五 公斤 。,this is five kilogram over weight .,this is five kilograms .,0.2577,0.6571,12,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.6325
+这 鞋 是 在 美国 制造 的 吗 ?,are these shoes made in the u.s.a. ?,is this shoe shoes in america in america ?,0.2592,0.3333,24,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.3612
+坐 巴士 去 橡树桥 然后 换车 去 航海 公园 。,take a bus to oak bridge and transfer to marine park .,take this bus to get to get there and take to get park .,0.252,0.463,29,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.4746
+"我 把 这个 相机 掉 了 , 快门 摔坏 了 。",i dropped this camera and broke the shutter .,i put this camera up .,0.1597,0.4222,26,5,0.4444444444444444,9,N/A,N/A,N/A,N/A,N/A,0.4231
+我 的 名字 叫 ishii 。,my name is ishii .,my name is suzuki .,0.3844,0.7222,5,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6403
+你 必须 买 张新票 。,you have to buy a new ticket .,you must buy to buy the food .,0.234,0.4,18,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4265
+我 能 要 半 壶 吗 ?,can i get a half-carafe ?,can i have a pot of your pot ?,0.2228,0.32,17,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.3813
+"我 想 预订 下 星期一 间 双 人间 , 二十三 和 二十四 号 。","i want to reserve a double for next weekend , the twenty-third and twenty-fourth .",i 'd like to make a double for some double for forty twenty-third and twenty-four .,0.1964,0.5976,33,8,0.4666666666666666,15,N/A,N/A,N/A,N/A,N/A,0.555
+我 能 试试 这 条 牛仔裤 吗 ?,can i try on this pair of jeans ?,can i try this jeans ?,0.2433,0.6667,11,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.6365
+我 要 送 你 到 门囗 。,i 'm going to see you to the door .,i would take your to the one of your house .,0.2045,0.2571,26,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.3806
+保险费 是 多少 钱 ?,how much is the insurance ?,what 's the insurance charge ?,0.245,0.4444,15,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.5508
+我 想 去 看 歌剧 。,i want to go to the opera .,i 'd like to see an opera .,0.234,0.4815,14,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4276
+在 春季 盛开 。,they bloom in spring .,it 's over the same day .,0.1991,0.1364,19,6,0.0,5,N/A,N/A,N/A,N/A,N/A,0.2531
+"请 把 包 放 这 , 把 手提箱 放 壁橱 里 。","put the bag over here , and the suitcase in the closet , please .","put this bag , please put down the suitcase .",0.1767,0.4462,36,10,0.3333333333333334,15,N/A,N/A,N/A,N/A,N/A,0.5222
+"请 问 , 我 能 取回 我 的 贵重 物品 吗 ?","can i have my valuables back , please ?","would you get my valuables for me again , please ?",0.2336,0.4359,22,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.4947
+"是 的 , 我们 确定 我们 做 了 预订 。","yes , we 're sure we have a reservation .","yes , we have sure we 're a reservation .",0.4403,0.8537,6,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.8812
+请 。,please .,please .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.9489
+"阳台 上 的 位子 , 谢谢 。","a seat on the terrace , please .","table table , please .",0.1963,0.5,16,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4395
+八月 十三 号 。,august thirtieth .,"number august , please .",0.2364,0.1111,16,3,0.0,3,N/A,N/A,N/A,N/A,N/A,0.3586
+你 好 。,hello .,hello .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.9489
+到 这个 城市 的 机场 巴士 在 哪 发车 ?,where does the airport bus to the city leave ?,where does the bus bus stop for the city ?,0.274,0.587,19,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.6075
+你 什么 时候 能 补办 它 ?,when can you reissue it ?,when do you reissue it ?,0.5373,0.88,3,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7584
+请 告诉 我 怎么 到 那儿 好 吗 ?,will you tell me how to get there ?,"would you tell me how to get there , please ?",0.59,0.6571,12,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.7174
+转 过去 。,turn around .,turn around .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+应该 选 谁 当 主席 ?,who should be chosen as the chairperson ?,who would like to cancel of the apple of bread ?,0.2554,0.3415,27,8,0.0,8,N/A,N/A,N/A,N/A,N/A,0.3424
+有 明晚 演出 的 票 吗 ?,do you have some tickets for a show tomorrow night ?,do you have tickets for a performance for tomorrow night ?,0.4235,0.6346,19,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.7039
+它 早一点 。,it 's earlier .,it was like .,0.2327,0.5333,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.3418
+马上 叫 服务员 来 我 房间 。,send someone quickly to my room .,a bellboy would be room .,0.1874,0.3333,22,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3113
+有 去 波士顿 的 直达车 吗 ?,is there any bus that goes to boston directly ?,is there a public train to boston ?,0.2292,0.5319,22,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.4913
+我 是 英国人 。,i 'm from great britain .,i 'm from england .,0.3147,0.56,11,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.505
+他们 退钱 吗 ?,do they give refunds ?,are they return the refund ?,0.2373,0.4091,13,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.4369
+我 想 给 我 男朋友 买 东西 。,i want to get something for my boyfriend .,i want to buy something for my boyfriend .,0.5969,0.9286,3,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.8222
+我 把 钱包忘 在 一 辆 出租车 上 了 。,i left my purse in a taxi .,i left my wallet on a taxi .,0.4032,0.7778,6,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6232
+我 想 要 一些 去污霜 。,i 'd like some cleansing cream .,i 'd like some shaving lotion .,0.4347,0.6562,11,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.5884
+我 想 在 阳台 上 吃 晚餐 。,i 'd like to have dinner on the terrace .,i 'd like to have dinner for dinner .,0.5463,0.7317,11,3,0.7,10,N/A,N/A,N/A,N/A,N/A,0.6631
+你 能 再 推荐 一 家 餐馆 吗 ?,could you suggest another restaurant ?,could you recommend a restaurant ?,0.3131,0.6316,14,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5775
+"我 很 想 去 , 但是 我 现在 很 忙 。","i 'd like to , but i 'm very busy right now .","i 'd like to , but i 'm busy right .",0.6335,0.8,9,2,0.8461538461538461,13,N/A,N/A,N/A,N/A,N/A,0.7987
+"我 觉得 恶心 , 而且 胃 里 不 能 有 东西 。",i feel nauseous and can n't keep anything in my stomach .,"i feel sick , and i have n't any things .",0.1975,0.4386,32,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.4215
+车站 在 哪 ?,where is the station ?,where is the station ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+你 能 给 我 的 保险 公司 写 一 份 偷窃 报告 吗 ?,could you make a theft report for my insurance company ?,can you write a theft report for my insurance ?,0.5027,0.7143,16,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.6956
+二十三 美元 二十 美分 。,twenty-three twenty .,to ms. twenty cents .,0.2364,0.3333,14,3,0.0,3,N/A,N/A,N/A,N/A,N/A,0.4409
+我 要 杯 啤酒 。,i 'll have a beer .,i 'll have a beer .,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+你 会 看到 这个 站牌 。,you 'll see the sign .,you 'll see the sign .,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+这 是 半日游 吗 ?,is this a half day tour ?,is this a half-day tour ?,0.3245,0.96,1,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7666
+平躺 。,on your stomach .,it in my bad .,0.1988,0.2941,12,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2267
+"道歉 , 你 能 告诉 我 怎么 用 淋浴 吗 ?","excuse me , but would you show me how to use the shower ?","a slice , can you tell me how to use the shower ?",0.4638,0.6491,20,5,0.6428571428571428,14,N/A,N/A,N/A,N/A,N/A,0.6035
+漂亮 的 射门 。,good shot .,it 's a beautiful house .,0.1995,0,20,5,0.0,3,N/A,N/A,N/A,N/A,N/A,0.1843
+烟 在 哪 卖 ?,where can i buy cigarettes ?,where are the cigarettes ?,0.2156,0.75,7,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5636
+迈克 打 我 。,mike hit me .,ring me .,0.2655,0.4615,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.3397
+请 签名 。,"your signature , please .","signature the signature , please .",0.5081,0.56,11,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.6516
+大概 最 多 十五 美元 。,maybe fifteen dollars at the most .,how about about the most most most hundred dollars .,0.213,0,38,8,0.0,7,N/A,N/A,N/A,N/A,N/A,0.4247
+我 明白 了 。,i see .,i see .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+你 能 帮忙 教 我 填 一下 表格 吗 ?,could you help me fill this form ?,could you fill me to fill this form ?,0.3689,0.8235,6,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7128
+请 问 服务台 在 哪 ?,could you tell me where the information counter is ?,"where is the information desk , please ?",0.1927,0.3846,32,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4945
+"是 的 , 我 喜欢 。","yes , i do .","yes , i like .",0.3844,0.6667,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6236
+"如果 是 那样 , 我 会 推荐 这 一 个 。","in that case , i 'd recommend this one .","if that , i 'd recommend it .",0.298,0.675,13,4,0.6,10,N/A,N/A,N/A,N/A,N/A,0.6041
+有 什么 夹克 我 可以 试穿 的 吗 ?,do you have any jackets i could try on ?,is there anything i can try something on ?,0.1993,0.275,29,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.3793
+你 能 说 慢 一点 吗 ?,can you speak slowly please ?,would you speak slowly ?,0.3147,0.5862,12,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.639
+我 想 把 这些 衣服 洗 一下 。,i 'd like these clothes cleaned .,i 'd like to have these clothes .,0.3155,0.6364,12,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.7028
+我 点 的 那 个 。,i ordered that .,i 'll bring that .,0.2634,0.5,8,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.4244
+我 要 咖啡 。,i 'd like coffee .,i 'll have some coffee .,0.245,0.4444,10,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.4706
+那么 两 张 去 圣地亚哥 的 往返 旅程 票 。,"then two round-trip tickets to san diego , please .","for two round tickets to san diego , please .",0.6606,0.8235,9,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.7688
+我 本来 要 搭乘 的 aa 一 一 次 航班 被 取消 了 。,"the flight i was supposed to be on , aa eleven , was cancelled .",i have a first of of the flight which i 'd have been cancel a flight .,0.1692,0.2344,49,16,0.0,15,N/A,N/A,N/A,N/A,N/A,0.3846
+听 起来 很 棒 。,that sounds great .,that sounds like .,0.2866,0.7368,5,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.649
+首先 我 非常 感谢 你们 为 我 准备 了 这么 好 的 安排 。,in the beginning i have to thank you very much for the perfect program you have prepared for me .,i was happy that you have a good place for me .,0.1173,0.3402,64,15,0.25,20,N/A,N/A,N/A,N/A,N/A,0.3402
+航班 被 取消 了 。,the flight has been cancelled .,i 've cancelled up .,0.1936,0.3871,19,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.4179
+我 会 叫 你 的 同伴 的 。,i 'll call your company .,my name is mine to meet your family .,0.2342,0.0,25,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.2823
+"对不起 , 他 现在 不 在 。","i 'm sorry , he 's not in at the moment .","i 'm sorry , he is not in now .",0.3825,0.6829,13,4,0.6666666666666667,12,N/A,N/A,N/A,N/A,N/A,0.6273
+我 希望 你 喜欢 这 种 颜色 和 样式 。,i hope you like this color and style .,i hope you like this color as well .,0.6105,0.8421,6,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.7459
+"对不起 , 请 问 我们 现在 在 哪 个 十字 路口 ?","excuse me , but what intersection are we on now ?","excuse me , but what time are we on now ?",0.7017,0.7959,10,1,0.9090909090909091,11,N/A,N/A,N/A,N/A,N/A,0.7639
+换 电池 。,"charge the battery , please .",change battery .,0.097,0.5172,14,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4586
+我 得 找 个 办法 把 它们 全部 花光 。,i 've got to find a way to use it all up .,i 'll have to find them things .,0.1253,0.4048,25,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.3865
+"我 听说 大多数 美国人 不 吃 生 鱼 , 是 吧 ?","i understand that most americans do n't eat fish raw , do they ?","i hear most fish is different raw fish , is n't they ?",0.2096,0.4219,37,9,0.3571428571428571,14,N/A,N/A,N/A,N/A,N/A,0.4603
+能 给 我 一 个 浴巾 吗 ?,may i have a bath towel ?,can i have a bath towel ?,0.8091,0.92,2,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.8217
+在 烤箱 旁边 的 篮子 里 。,it 's in the basket near the toaster .,in the first of the latest house .,0.2065,0.3421,25,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3987
+罗丁 的 雕刻 作品 在 哪 ?,where is rodin 's sculpture ?,what 's in the world house ?,0.2368,0.3793,18,6,0.0,6,N/A,N/A,N/A,N/A,N/A,0.3265
+你 要 把 镜片 换成 度数 大 些 的 吗 ?,would you change these lenses for stronger ones ?,do you have the lenses of a large size of you ?,0.2535,0.4694,26,9,0.0,9,N/A,N/A,N/A,N/A,N/A,0.4021
+我 找遍 了 房间 也 没 找到 护照 。,i 've searched all over the room for the missing passport .,i left no passport in my room .,0.17,0.2712,43,9,0.25,12,N/A,N/A,N/A,N/A,N/A,0.3631
+我们 还 没 想 过 。,we have n't thought about it .,we do n't want yet .,0.2223,0.4333,17,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.334
+请 把 这个 换成 德国 马克 。,please change this into german marks .,please exchange this for some eyes .,0.2621,0.6053,15,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.4817
+我 要 提前 支付 吗 ?,do i pay in advance ?,should i pay the date ?,0.245,0.4286,12,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.3959
+请 带 我们 去 希尔顿 饭店 。,"take us to the hilton hotel , please .",please take us to the hilton hotel .,0.6452,0.5789,16,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.8258
+窗户 坏 了 。,the window is broken .,the window does n't work .,0.245,0.5,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.4957
+我 明天 一定 再 回来 。,i 'll be sure and come back again tomorrow .,i will be back later tomorrow .,0.1704,0.5227,21,5,0.5,10,N/A,N/A,N/A,N/A,N/A,0.5004
+谢谢 你 。,thank you .,thank you .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+我 觉得 他 年纪 很 大 了 。,i think he is about ninety-nine years old .,i think he is a lot of gold .,0.3156,0.5349,20,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.4944
+你 在 喝 什么 ?,what are you drinking ?,what do you drink ?,0.2616,0.7391,6,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5795
+我 要 一 个 大杯 雪碧 。,i 'll have a large sprite .,i 'll have a large certificate .,0.6435,0.7407,7,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7041
+你们 对 脸上 的 粉刺 和 雀斑 有 什么 治疗 方法 ?,do you have any treatments for spots and freckles on the face ?,what are the difference for the old house in the states ?,0.2332,0.3968,38,10,0.23076923076923067,13,N/A,N/A,N/A,N/A,N/A,0.3548
+我 把 相机忘 在 西雅图 到 芝加哥 的 九 次 列车 上 了 。,i left my camera on the nine train from seattle to chicago .,i left my camera on the train by seattle and chicago on the chicago .,0.385,0.5667,26,6,0.5384615384615384,13,N/A,N/A,N/A,N/A,N/A,0.6685
+在 地下室 。,they 're on the basement .,in the basement .,0.2675,0.6154,10,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.6063
+"好 的 , 你 确定 这 是 你 全部 的 行李 吗 ?","all right , are you sure that this is all your luggage ?",okay . you have to sure this baggage are you ?,0.1803,0.3929,34,10,0.23076923076923067,13,N/A,N/A,N/A,N/A,N/A,0.467
+这个 男孩 从 我 车 的 前面 跑 了 出来 。,this boy ran out in front of my car .,this boy did come in the front of the car of my boy .,0.2884,0.3784,23,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.5433
+"那么 , 环境 污染 问题 也 减少 了 , 对 吗 ?","then , the problem of environmental contamination is also reduced . right ?","then , the total , the area is the wrong area to the down down ?",0.1578,0.36,48,11,0.15384615384615385,13,N/A,N/A,N/A,N/A,N/A,0.3573
+好球 。,nice shot .,it in my own .,0.1988,0.0909,10,4,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2254
+我 的 相机 丢 了 。,i lost my camera .,i lost my camera .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我 想 用 航空 邮件 发 这个 包裹 到 东京 。,i 'd like to send this package to tokyo by air courier .,i 'd like to send this package to tokyo by airmail .,0.7604,0.875,7,2,0.8461538461538461,13,N/A,N/A,N/A,N/A,N/A,0.8213
+为了 比尔 。,to bill .,i 'll have bill .,0.238,0,10,3,0.0,3,N/A,N/A,N/A,N/A,N/A,0.4045
+在 哪 能 取票 ?,where can i pick up the ticket ?,where can i pick the picture ?,0.3944,0.75,8,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.6799
+在 哪 能 复印 ?,where can i make a copy ?,where can i make a refund ?,0.6435,0.76,6,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.738
+有 哪天 的 票 ?,any day ticket ?,do you have a one-day club ?,0.1991,0,21,6,0.0,4,N/A,N/A,N/A,N/A,N/A,0.2354
+十八 美元 整 。,exactly eighteen dollars .,it 's eighteen dollars worth dollars .,0.2737,0.1923,21,4,0.0,4,N/A,N/A,N/A,N/A,N/A,0.5199
+还 没有 。,not yet .,not yet .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+你 能 照看 这个 行李 吗 ?,will you keep this baggage ?,can you put this baggage ?,0.3276,0.7143,8,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6067
+需要 十八 美元 的 邮票 。,that 'll be eighteen dollars for the stamps .,i need fifty dollars for us dollars .,0.1922,0.4444,25,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3916
+这 附近 有 相机 店 吗 ?,are there any camera shops near here ?,is there a camera around here ?,0.2144,0.6579,13,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5195
+这个 飞机 终于 起飞 了 。,the airplane took off at last .,the plane number is leaving this flight .,0.2357,0.1613,26,6,0.1428571428571429,7,N/A,N/A,N/A,N/A,N/A,0.3177
+我 想 要 些 纸 。,i 'd like some paper .,i 'd like some paper .,1.0,1.0,0,0,1.0,6,N/A,N/A,N/A,N/A,N/A,0.9489
+"现在 请 看 方案 的 进度表 , 在 第十七 页 。","now , please look at the progress schedule of the project , which can be found on page seventeen .",now please see the other way in the project now are in the shopping .,0.1418,0.4592,53,14,0.3,20,N/A,N/A,N/A,N/A,N/A,0.4018
+"非常 感谢 , 先生 。","thank you very much , sir .",thank you very much .,0.474,0.7778,6,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7665
+今天 是 她 的 生日 。,today 's her birthday .,it 's her birthday .,0.6687,0.7826,5,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7529
+不 用 找 了 。,keep the change .,keep the change .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+有 税 吗 ?,is there any duty ?,do you have tax ?,0.1988,0.2632,14,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.2482
+给 我 画 张 图 。,draw me a map .,give me a map .,0.6687,0.7333,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6754
+对不起 。,excuse me .,excuse me .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+有 周末 的 安排 吗 ?,are there any weekend arrangements ?,do you have a weekend for the weekend ?,0.2342,0.3611,23,7,0.0,6,N/A,N/A,N/A,N/A,N/A,0.3779
+不 。,no .,no .,1.0,1.0,0,0,1.0,2,N/A,N/A,N/A,N/A,N/A,0.7497
+我 想 要 一 个 无烟区 的 座位 。,"i want a no-smoking seat , please .",i 'd like a non-smoking seat .,0.2441,0.5143,17,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.5301
+我们 什么 时候 出发 ?,what time are we leaving ?,what time do we leave ?,0.2633,0.7692,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6319
+钱 。,money .,"money , please .",0.2327,0,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.4909
+哦 ? 我 能 用 这 支 笔 在 纸上 写写 吗 ?,oh ? may i try writing with this pen on paper ?,oh ? i 'm allowed to break a pen here by paper ?,0.2505,0.3617,30,8,0.3333333333333334,12,N/A,N/A,N/A,N/A,N/A,0.4009
+"不 要 了 , 谢谢 , 就 要 这些 。","no , thanks , that 's all .","no , thanks , just .",0.385,0.6296,10,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.5984
+它 现在 已经 扎根 在 日本 的 饮食 习惯 中 了 。,but it has already become firmly rooted among japanese eating habits .,it 's already in japan 's custom in japan when the face it was in japan .,0.2442,0.2714,51,15,0.0,12,N/A,N/A,N/A,N/A,N/A,0.357
+我 早 就 点 了 。,i ordered it long time ago .,i have a little time i was going to sleep .,0.2554,0.0,28,8,0.0,7,N/A,N/A,N/A,N/A,N/A,0.3358
+请 给 我 看 个 摆钟 。,"show me a pendulum clock , please .",please show me the eye .,0.1887,0.2571,26,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.4304
+当然 。,certainly .,of course .,0.2093,0.1818,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.2178
+我 周五 早上 要 到 洛杉矶 。,i have to be in los angeles on friday morning .,i have to arrive in los angeles on friday morning .,0.7017,0.8936,5,1,0.9090909090909091,11,N/A,N/A,N/A,N/A,N/A,0.836
+是 曼彻斯特 。,it 's manchester .,it 's a full .,0.2634,0.5,9,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.4134
+请 把 它 写 下来 。,please write that down .,"write it down , please .",0.2822,0.2083,19,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.6173
+"是 的 , 增值税 在 你 购买 时 扣除 。","yes , value-added tax is deducted from your purchase .","yes , the vat time on the line you 'll start .",0.1834,0.3519,35,9,0.1,10,N/A,N/A,N/A,N/A,N/A,0.3106
+我 有些 东西 要 缝 。,i have some items for sewing .,i have some of some medicine .,0.2876,0.5667,13,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4945
+我 确信 我 有 预约 。,i 'm sure i have a reservation .,i 'm sure i have a reservation .,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+请 送 我 的 朋友 到 医院 。,"take my friend to a hospital , please .",please take my friend to the hospital .,0.3509,0.5128,19,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.7324
+我 想 要 一 个 潜水 许可证 。,i want a license of scuba diving .,i 'd like a license for scuba diving .,0.2868,0.7353,9,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6323
+有别 的 饭店 吗 ?,are there any other hotels ?,do you have another hotel ?,0.1995,0.5714,12,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.4528
+我 讨厌 你 眼 中 的 悲伤 。,i hate that sadness in your eyes .,i have given that kind of you .,0.2608,0.3824,21,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.3897
+我 想 预约 今晚 七点 的 位子 。,i 'd like to reserve a table for this evening at seven .,"i 'd like to make a reservation for tonight , at seven tonight .",0.234,0.4107,33,5,0.6153846153846153,13,N/A,N/A,N/A,N/A,N/A,0.5676
+这个 建筑师 是 谁 ?,who was the architect ?,this is that the temperature ?,0.2373,0.1739,19,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.3295
+我 不 敢 相信 你 居然 四十 岁 了 。,i can n't believe that you are actually forty .,it 's not believe about forty or .,0.2031,0.4894,24,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.4159
+"但是 如果 双方 没有 任何 异议 的话 , 它 当然 可以 更新 。",but of course it will be renewed if there are no disagreements .,"but , if n't n't n't know any the way . it 's all right .",0.2643,0.3125,44,14,0.0,13,N/A,N/A,N/A,N/A,N/A,0.3144
+我 可以 带 多少 瓶 免税 的 ?,how many bottles can i take duty-free ?,how many bottles of car i can bring tax free ?,0.221,0.5897,16,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.5576
+著名 的 米兰大 教堂 。,the famous duomo of milano .,the famous in fashion .,0.2156,0.5714,12,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4638
+我 想 要 个 长方形 的 。,i 'd like a rectangular one .,i 'd like a poor one .,0.4889,0.6552,10,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.6454
+我 想 让 头发 盖 着 耳朵 。,i 'd like to have my ears covered on the sides .,i 'd like my hair paper up .,0.1652,0.4167,28,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.3989
+有 番茄酱 吗 ?,do you have ketchup ?,do you have any ketchup ?,0.3833,0.8095,4,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.7781
+这个 可以 机洗 吗 ?,can this be machine-washed ?,is this machine safe ?,0.2364,0.6071,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.4629
+吸烟区 还是 无烟区 。,smoking or non ?,smoking or non-smoking ?,0.2866,0.5,8,1,0.75,4,N/A,N/A,N/A,N/A,N/A,0.6564
+"我 要 点菜 , 谢谢 。","i would like to order , please .","i 'd like to order , please .",0.7071,0.875,4,1,0.875,8,N/A,N/A,N/A,N/A,N/A,0.8091
+"那么 , 我 去 失物 招领处 看看 吧 。","well , let me check the lost and found .","then , i 'll check , to check on the lost and check in .",0.1735,0.3,28,9,0.1,10,N/A,N/A,N/A,N/A,N/A,0.4543
+"你 可以 坐 巴士 , 出租车 和 火车 。","you have to take a bus , taxi or train .","you can take the bus and taxi , the taxi and train .",0.2189,0.375,25,7,0.36363636363636365,11,N/A,N/A,N/A,N/A,N/A,0.5023
+"政府 机构 还 继续 工作 , 但是 他们 的 职员会 轮流 放假 。",government offices remain open but their employees take several days off by turns .,"do n't work the local in the government , but they come by the world .",0.2643,0.2651,61,14,0.0,14,N/A,N/A,N/A,N/A,N/A,0.3675
+我 想 下 次 再 找 你 吧 。,i 'd like to ask for you again next time .,i 'd like to have a time next time .,0.3438,0.6429,15,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.5748
+请 把 随身 物品 放 在 你们 的 座椅 下面 。,please put your belongings under your seat .,please put your belongings as you seat into your seat .,0.3393,0.6818,14,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6755
+拍子 的 线旧 了 。,the strings are worn out .,the sea 's stopped out .,0.245,0.5,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4133
+你 怎么 去 学校 ?,how do you go to school ?,how do you get to school ?,0.4501,0.92,2,1,0.8571428571428572,7,N/A,N/A,N/A,N/A,N/A,0.7832
+这 是 车费 。,here 's the fare .,this is a lot of cigarettes .,0.1991,0,19,6,0.0,5,N/A,N/A,N/A,N/A,N/A,0.2302
+我们 过 得 很 愉快 。,we had a great time .,we had a nice time .,0.3833,0.7619,5,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.6556
+我 只是 四处 看看 。,i 'm just looking around .,i 'm just looking .,0.5789,0.7308,7,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7696
+十 美元 两 个 可以 吗 ?,will you accept ten dollars for two ?,will you be ten dollars for two dollars ?,0.3689,0.6486,13,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7073
+每 次 饭后 用 一 杯水 冲服 一 粒 药丸 。,take one pill with a glass of water after each meal .,take one pill with a glass of water after each meal .,1.0,1.0,0,0,1.0,12,N/A,N/A,N/A,N/A,N/A,0.9489
+我们 进去 。,let 's do it .,let 's go .,0.2232,0.7143,4,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5574
+你 应该 从 行李 传送带 上 取下 你 的 行李 。,you are supposed to pick up your baggage from the baggage carousel .,you should should put your baggage on your baggage .,0.1669,0.5,34,8,0.3846153846153846,13,N/A,N/A,N/A,N/A,N/A,0.4402
+我 喜欢 这个 。,i like it .,i like this one .,0.2634,0.3636,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.5012
+七点三十 。,seven thirty .,it in my own .,0.1988,0.2857,10,4,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2433
+我 送到 洗衣 店 的 衣服 还 没有 送 回来 。,my laundry has n't come back .,i have to order the laundry shop yet .,0.2342,0.0,30,8,0.0,7,N/A,N/A,N/A,N/A,N/A,0.3469
+住手 。,hands off .,cut it out .,0.1956,0.2727,8,3,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2109
+文件 。,documents .,papers .,0.2467,0.3636,7,1,0.5,2,N/A,N/A,N/A,N/A,N/A,0.2166
+"你 是 对 的 - 我 知道 , 我们 何 不 一起 去 那 呢 ?","you 're right-i know , why do n't we go there together ?","do you have , how why we do n't you go to there ?",0.2257,0.4464,31,9,0.3076923076923077,13,N/A,N/A,N/A,N/A,N/A,0.5241
+我 从 小时候 到 现在 一直 对 历史 感兴趣 。,i have always been interested in history ever since i was little .,i 've been driving from a child now to live out .,0.2332,0.303,46,10,0.23076923076923067,13,N/A,N/A,N/A,N/A,N/A,0.2975
+我 想 账单 有 错 。,i think there is a mistake in the bill .,i think there 's a mistake of the bill .,0.3829,0.925,3,2,0.8,10,N/A,N/A,N/A,N/A,N/A,0.7534
+"我 想 让 你 带 我 去 公共 汽车站 , 可以 吗 ?",may i ask you to take me to the bus stop ?,"shall i show you to the bus stop , please ?",0.2648,0.4048,25,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.5572
+我 想 要 一 个 五十 的 和 五 个 十 块 的 。,"i would like one fifty dollars bill and five ten dollars bills , please .",i 'd like a ten of fifty ten .,0.1512,0.3014,51,11,0.2666666666666667,15,N/A,N/A,N/A,N/A,N/A,0.3399
+请 把 胶水 给 我 。,please give me some glue .,please make me some ice for me .,0.234,0.5385,12,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.5183
+我 想 要 一百八十 美元 以下 的 。,i 'd like it to stay under one hundred eighty dollars .,i 'd like it eighty dollars for a mile .,0.2658,0.4364,31,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.5611
+"抱歉 , 您 交 钥匙 了 吗 ?","excuse me , did you give back the key ?","excuse me , but ?",0.1414,0.4103,23,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.4359
+飞机 上 卖 免税 货 吗 ?,are there any duty-free sales on board ?,do you sell duty-free goods on board ?,0.2576,0.6,16,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5237
+第三十二 街 。,thirty-second street .,go street .,0.3706,0.4545,12,1,0.6666666666666667,3,N/A,N/A,N/A,N/A,N/A,0.4676
+不 严重 。,not serious .,no bad .,0.2093,0.3846,8,2,0.3333333333333334,3,N/A,N/A,N/A,N/A,N/A,0.2088
+那 个 餐馆 供应 好 的 葡萄酒 吗 ?,do they serve good wine in the restaurant ?,is that a good wine for that good ?,0.2073,0.4651,23,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3937
+明天 七点半 叫 我 起床 行吗 ?,could you give me a morning call at seven thirty tomorrow ?,could i have a wake-up call at seven thirty tomorrow ?,0.4531,0.7458,15,4,0.6666666666666667,12,N/A,N/A,N/A,N/A,N/A,0.6561
+你 喜欢 我 吗 ?,do you like me ?,do you like me ?,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+我们 要 在 这 停 多久 ?,how long are we stopping here ?,how long are we here for this hall ?,0.3303,0.5161,15,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.6125
+"恐怕 没有 了 , 先生 。","i 'm afraid they 've all been taken , sir .",i 'm afraid we do n't sir .,0.2072,0.5349,20,6,0.4545454545454546,11,N/A,N/A,N/A,N/A,N/A,0.4451
+有 免税 的 东西 。,these are tax-free items .,something kind of things .,0.1988,0.1538,22,4,0.2,5,N/A,N/A,N/A,N/A,N/A,0.2412
+我 不 想 要 太 靠后 的 座位 。,i 'd like a seat that is not too far back .,i do n't want quite a seat in a meeting meeting .,0.197,0.2093,34,10,0.16666666666666657,12,N/A,N/A,N/A,N/A,N/A,0.3461
+在 哪儿 我 能 兑现 旅行 支票 ?,where can i cash a traveler 's check ?,where can i cash traveler 's checks ?,0.3771,0.9211,3,2,0.7777777777777777,9,N/A,N/A,N/A,N/A,N/A,0.8116
+我 想 买 一些 具有 夏威夷 特色 的 卡 。,i 'm looking for some cards that are typically hawaiian .,i 'd like to buy some of the tourist card .,0.2554,0.386,35,9,0.18181818181818174,11,N/A,N/A,N/A,N/A,N/A,0.3385
+我 想 帐单 可能 算错 了 。,i think there 's a mistake in the bill .,i think the bill is wrong .,0.2026,0.45,22,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.5127
+您 预约 使用 这 台 微机 了 吗 ?,do you have any reservations about the use of this microcomputer ?,do you have a reservation for this hotel ?,0.1774,0.5758,28,7,0.41666666666666663,12,N/A,N/A,N/A,N/A,N/A,0.4893
+我 当然 看 了 。,sure i did .,i 'm on .,0.2327,0.25,9,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.244
+要 前排 的 。,"in the front , please .","a seat , please .",0.2929,0.6087,9,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5142
+下午 有 走 的 车 吗 ?,is there a bus that leaves this afternoon ?,is there a train that goes to go ?,0.2476,0.5349,20,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.4852
+我 想 走 免税 的 正式 手续 。,i want to go through duty free formalities .,i want the formal match .,0.1486,0.4091,26,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.415
+一 天 大概 一百 美元 。,for one day it is about one hundred dollars .,it 's one hundred dollars a day .,0.222,0.4444,25,7,0.3,10,N/A,N/A,N/A,N/A,N/A,0.5998
+我们 今晚 完全 客满 。,we are quite full tonight .,we 're full evening .,0.2142,0.5185,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4197
+你 愿意 和 我 合住 吗 ?,do you want to share a room with me ?,would you like to do for me ?,0.1927,0.3784,23,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.3737
+"对不起 , 可以 问 一下 你 吃 的 是 什么 菜 吗 ?","excuse me , may i ask the name of your dish ?",excuse me . could you tell me what you have eating to the dish ?,0.2248,0.2,36,11,0.08333333333333343,12,N/A,N/A,N/A,N/A,N/A,0.3997
+我 想 要 那 个 。,i wanted that .,i want to get that .,0.245,0.6,6,3,0.25,4,N/A,N/A,N/A,N/A,N/A,0.5298
+"它 说 "" 单行线 "" 。","it says "" one way "" .","it says "" "" "" .",0.3245,0.6667,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.5938
+"我 买 的 是 二手 的 , 我 是 从 一 个 二手车 经销商 那儿 买 的 。",i bought it secondhand from a used-car dealer .,"it 's a little case of much , i bought it by the car i buy at a car around a year .",0.1196,0,59,18,0.0,9,N/A,N/A,N/A,N/A,N/A,0.3357
+请 在 这 签名 。,please sign your name here .,please sign here .,0.2222,0.6429,10,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.641
+这 是 发送 地址 。,here 's the forwarding address .,here are this address .,0.2156,0.5625,14,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4982
+很 遗憾 。,i 'm sorry .,i 'm sorry .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+我 朋友 情况 很 糟 。,my friend 's conditions is bad .,my friend is very bad .,0.2803,0.5625,14,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.5456
+你 可以 包装 这个 吗 ?,could you gift wrap this ?,could you wrap this ?,0.3683,0.8077,5,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7635
+是 隐隐 作痛 吗 ?,is it a dull pain ?,is it a pain ?,0.3683,0.7368,5,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7035
+"我 妻子 , kaori 。","my wife , kaori .","my wife , i 'm .",0.3276,0.7059,5,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.6168
+我们 一共 六 个 人 。,there are six in our party .,we have six people .,0.1585,0.4286,16,5,0.2857142857142857,7,N/A,N/A,N/A,N/A,N/A,0.3213
+你 读 过 关于 你 作业 的 说明 了 吗 ?,have you read my instructions regarding your assignment ?,have you ever explain the explain in your homework ?,0.213,0.3684,36,6,0.3333333333333334,9,N/A,N/A,N/A,N/A,N/A,0.3685
+你 介意 我们 推迟 到 明天 吗 ?,would you mind if we put it off until tomorrow ?,do you mind let we go it until tomorrow ?,0.248,0.7083,14,4,0.6363636363636364,11,N/A,N/A,N/A,N/A,N/A,0.6101
+"我们 想 把 剩菜 带 回家 , 谢谢 。","we 'd like to take our leftovers home , please .","we 'd like to take it on , please .",0.4754,0.6875,15,3,0.7272727272727273,11,N/A,N/A,N/A,N/A,N/A,0.6378
+五 天 。,"for five days , please .",five days .,0.156,0.4583,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5278
+我们 已经 绕岛 一 周 。,we 've come around the top of the island .,we 're in a week in my week .,0.2096,0.3571,27,8,0.2,10,N/A,N/A,N/A,N/A,N/A,0.2579
+感觉 很 舒服 。,they feel comfortable .,it feels comfortable .,0.259,0.7826,5,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.6252
+它 松 。,it 's loose .,it 's loose .,1.0,1.0,0,0,1.0,4,N/A,N/A,N/A,N/A,N/A,0.9489
+沿着 南面 。,it 's down south .,it 's tennis street .,0.2634,0.4444,10,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.3956
+"靠 窗 的 桌子 , 谢谢 。","a table by the window , please .","a window table , please .",0.2597,0.4688,17,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6924
+新年 快乐 。,happy new year .,a very happy new year .,0.5081,0.5625,7,2,0.5,4,N/A,N/A,N/A,N/A,N/A,0.7148
+它 什么 时候 开门 ?,when does it open ?,what time does it open ?,0.5081,0.6316,7,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.6483
+"靠 窗户 的 桌子 , 谢谢 。","window table , please .","a window table , please .",0.7598,0.913,2,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.8655
+请 把 它们 包装 一下 。,please wrap them up .,please wrap them .,0.3691,0.8571,3,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.8131
+有 餐馆区 吗 ?,is there a main area for restaurants ?,is there a japanese ?,0.211,0.4474,21,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4292
+一 张 去 芝加哥 的 往返 票 。,"one round-trip ticket for chicago , please .","a round-trip ticket to chicago , please .",0.4111,0.8864,5,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7567
+我们 能 租 拍子 吗 ?,can we rent rackets ?,can we rent a local pills ?,0.2876,0.4762,11,3,0.4,5,N/A,N/A,N/A,N/A,N/A,0.5208
+在 哪 可以 找到 激光 唱碟 ?,where would i find cd 's ?,where can i find a vending ?,0.2473,0.5,13,3,0.5714285714285715,7,N/A,N/A,N/A,N/A,N/A,0.4865
+我 问 为什么 不 在 饭店 大堂 见 呢 ?,why do n't we meet in the lobby of the hotel ?,why do n't understand the hotel from in hotel ?,0.2411,0.587,19,6,0.5,12,N/A,N/A,N/A,N/A,N/A,0.5231
+剩下 的 在 酒店 支付 。,please pay the remainder at the hotel .,the rest room is pay in the rest .,0.2785,0.3333,26,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4045
+日语 书 在 哪里 ?,where are the japanese books ?,where are japanese books ?,0.3683,0.8667,4,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.8127
+机场 的 邮局 在 哪 ? 我 想 通过 普通 邮件 把 这个 寄到 日本 。,where is the post office in the airport ? i 'd like to send this surface mail to japan .,how can i get a seat in the airport which would like to send this by japan .,0.1991,0.5227,42,12,0.4,20,N/A,N/A,N/A,N/A,N/A,0.5208
+上面 不 要 剪 太 多 。,do n't take too much off the top .,there is no more much on a little more .,0.2325,0.2941,24,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.3282
+包括 税 那 个 白色 的 多少 钱 ?,how much is that white one including tax ?,how much is that white in the white white ?,0.4111,0.6429,15,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.6013
+我 的 父亲 时常 喝醉 。,my father often gets drunk .,my father says be .,0.2156,0.5,14,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4432
+我 将 永远 感激 你 。,i 'm forever grateful .,i will be happy to help you .,0.2357,0.0435,22,6,0.0,5,N/A,N/A,N/A,N/A,N/A,0.2298
+这个 。,this one .,this one .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+最近 的 鱼 市场 在 哪 ?,where 's the nearest fish market ?,where 's the most market ?,0.3245,0.7059,10,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6314
+好 的 。,all right .,all right .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+抱歉 。,excuse me .,excuse me .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+哪 有 八 码 的 罩衫 ?,where can i find a blouse in a size eight ?,where 's this blouse ?,0.0788,0.3953,26,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.3732
+请 给 我 两 个 小杯 的 可乐 。,"two small cokes , please .","two small of more , please .",0.3365,0.7692,6,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6524
+我 要 火腿 。,i 'll have some ham .,i 'd like to have a ham .,0.234,0.4286,12,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.4692
+"看 上去 像 是 丝 的 , 是 吗 ?","looks like silk , does n't it ?","they look up in silk , are n't it ?",0.2519,0.5484,14,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.5115
+学生 要 参加 多少 考试 ?,how many exams will a student take ?,how many of the students take a students ?,0.2356,0.3889,22,6,0.25,8,N/A,N/A,N/A,N/A,N/A,0.526
+能 给 我 拿 张 票 吗 ?,could you arrange a ticket for me ?,can i have a ticket ?,0.1756,0.4571,19,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.4068
+女 卫生间 在 哪 ?,where 's the ladies ' room ?,where 's the ladies ?,0.474,0.75,7,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.753
+请 叫 辆 救护车 好 吗 ? 出 了 一 起 车祸 。,"would you call an ambulance , please ? there has been an accident .","will you call a ambulance , please ? it 's been a traffic accident .",0.2289,0.7164,19,6,0.5714285714285715,14,N/A,N/A,N/A,N/A,N/A,0.6379
+这个 香槟 要 让 你 醉 了 。,the champagne is going to your head .,the interpreter to meet your temperature .,0.2441,0.2973,26,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.3777
+你 能 快点 吗 ?,"would you hurry , please ?",can you hurry up ?,0.2156,0.5385,12,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.4845
+去 芝加哥 的 往返 旅行 票 。,"a round-trip ticket to chicago , please .","to chicago return tickets to chicago , please .",0.4463,0.6098,16,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.6006
+我 预约 了 史密斯 先生 。,i made an appointment with mr. smith .,i have mr. smith .,0.211,0.4211,22,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.4331
+你 现在 最 好 打辆 出租车 回去 。,now i 'd better get a taxi and go back .,you 'd better go best over the taxi .,0.1886,0.45,22,8,0.27272727272727265,11,N/A,N/A,N/A,N/A,N/A,0.4818
+我们 改天 再 见 吧 。,we can make it some other time .,let 's meet again some other time .,0.3457,0.625,12,4,0.5,8,N/A,N/A,N/A,N/A,N/A,0.5524
+非常 感谢 。,thank you ever so much .,thank you very much .,0.2755,0.8333,4,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.6353
+还 有 商量 的 余地 。,there is some room left for further negotiation .,there are only one in the same view .,0.2342,0.3878,30,7,0.22222222222222215,9,N/A,N/A,N/A,N/A,N/A,0.3187
+当 我 买票 的 时候 我 已经 支付 过 了 。,i already paid it when i bought my ticket .,i was paid the place i was paid .,0.2492,0.3721,27,6,0.4,10,N/A,N/A,N/A,N/A,N/A,0.3305
+这 戒指 是 十四 k金 的 吗 ?,is this ring fourteen carat gold ?,does this ring called eighteen ?,0.2074,0.4412,19,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.4924
+请 再 给 我 看 一下 菜单 。,"show me the menu again , please .",please show me another menu .,0.1995,0.3333,22,5,0.375,8,N/A,N/A,N/A,N/A,N/A,0.5669
+现在 最 受 欢迎 的 音乐剧 是 哪 个 ?,which musical is popular now ?,what is the most popular musical now ?,0.2475,0.3333,20,5,0.16666666666666657,6,N/A,N/A,N/A,N/A,N/A,0.582
+这 件 罩衫 正 是 我 要 找 的 。,this blouse is just what i was looking for .,this blouse is what i was looking for .,0.669,0.8864,5,1,0.9,10,N/A,N/A,N/A,N/A,N/A,0.8444
+你 想要 哪 个 区 的 ?,which section would you like to sit in ?,which would you like ?,0.1826,0.55,18,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.5923
+谢谢 你 。,thank you .,thank you .,1.0,1.0,0,0,1.0,3,N/A,N/A,N/A,N/A,N/A,0.9489
+我 的 机票 丢 了 。,i 've lost my plane ticket .,i lost my airline ticket .,0.2803,0.7143,8,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.6442
+能 给 我 拿 些 治 头疼 的 药 吗 ?,may i have some medicine for headache ?,can i have some medicine for a headache ?,0.5133,0.8974,4,2,0.75,8,N/A,N/A,N/A,N/A,N/A,0.7893
+大约 什么 时候 结束 ?,about what time does it end ?,about what time does it be on ?,0.5411,0.8621,4,2,0.7142857142857143,7,N/A,N/A,N/A,N/A,N/A,0.7681
+就 这些 了 。,that 'll be all .,that 's all .,0.2232,0.7059,5,2,0.6,5,N/A,N/A,N/A,N/A,N/A,0.5574
+当然 可以 。,certainly .,of course .,0.2093,0.1818,9,2,0.0,2,N/A,N/A,N/A,N/A,N/A,0.2178
+这里 能 换 日元 吗 ?,can you exchange yen here ?,can i change japanese yen here ?,0.2876,0.5185,13,3,0.5,6,N/A,N/A,N/A,N/A,N/A,0.5649
+你 首先 要 回到 车站 。,you should first go back to the station .,you 'd like to be back to the station .,0.4111,0.7073,12,4,0.5555555555555556,9,N/A,N/A,N/A,N/A,N/A,0.6071
+让 我 看看 它 。,let me see it .,let 's see it .,0.3844,0.8667,2,1,0.8,5,N/A,N/A,N/A,N/A,N/A,0.6673
+还 有 几 站 到 纽约 ?,how many more stops to new york ?,how many more stops to new york ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+两 天 的 多少 钱 ?,how much is it for two days ?,how much is it for two days ?,1.0,1.0,0,0,1.0,8,N/A,N/A,N/A,N/A,N/A,0.9489
+退后 。,stay back .,it in my own .,0.1988,0.0909,10,4,0.0,3,N/A,N/A,N/A,N/A,N/A,0.2063
+请 为 我 做 头发 。,"so , set my hair , please .",please make me to make a hair .,0.2608,0.1852,22,7,0.125,8,N/A,N/A,N/A,N/A,N/A,0.4171
+我 要 量量 你 的 体温 。,i 'll take your temperature .,i 'll have your temperature .,0.3833,0.931,2,1,0.8333333333333335,6,N/A,N/A,N/A,N/A,N/A,0.7643
+我 已经 提前 支付 过 吃饭 和 酒店 的 费用 。,i 've paid for meals and hotel charges in advance .,i have to pay for the hotel and the hotel 's bed with the hotel .,0.2795,0.2941,36,11,0.0,11,N/A,N/A,N/A,N/A,N/A,0.3603
+请 发 个 挂号信 。,please mail this letter registered .,please send this letter .,0.2317,0.5833,15,2,0.6666666666666667,6,N/A,N/A,N/A,N/A,N/A,0.5895
+我 想 要 两 个 连 在一起 的 座位 。,i 'd like two seats side by side .,i 'd like two seats together .,0.4835,0.6765,11,3,0.6666666666666667,9,N/A,N/A,N/A,N/A,N/A,0.6334
+我们 稍后 回来 。,we 'll be back later then .,let 's come back later .,0.2074,0.5556,12,4,0.4285714285714286,7,N/A,N/A,N/A,N/A,N/A,0.5119
+我 做 了 预订 。,i have a reservation .,i have a reservation .,1.0,1.0,0,0,1.0,5,N/A,N/A,N/A,N/A,N/A,0.9489
+"我 没有 预约 , 但 现在 能 给 我 做 吗 ?","i do n't have an appointment , but could you take me now ?","i do n't have a reservation , but will you get it now ?",0.2474,0.6379,21,5,0.6428571428571428,14,N/A,N/A,N/A,N/A,N/A,0.5328
+我 要 去 卖 半导体 。,i want to sell semiconductors .,i 'm going to the food .,0.2621,0.2581,23,4,0.3333333333333334,6,N/A,N/A,N/A,N/A,N/A,0.2882
+如果 方便 的 话 我 想 明天 两 点 和 你 见面 。,i 'll meet you at two o 'clock tomorrow if that 's convenient .,i would like to meet a few convenient after tomorrow 's around tomorrow .,0.2969,0.2063,50,12,0.1428571428571429,14,N/A,N/A,N/A,N/A,N/A,0.4507
+你 有 荷兰 巧克力 吗 ?,do you have chocolate made in holland ?,do you have chocolate ?,0.3881,0.5897,16,3,0.625,8,N/A,N/A,N/A,N/A,N/A,0.6556
+所有 这些 都 在 一 张 账单 上 吗 ?,will this all be on the same tab ?,is these these one card ?,0.121,0.4118,20,8,0.11111111111111115,9,N/A,N/A,N/A,N/A,N/A,0.3203
+我 想 要 一 件 长袖 套衫 。,i 'd like a pullover with long sleeves .,i 'd like a pullover with long .,0.7673,0.8,8,1,0.8888888888888888,9,N/A,N/A,N/A,N/A,N/A,0.828
