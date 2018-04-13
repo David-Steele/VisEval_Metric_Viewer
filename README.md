@@ -1,4 +1,4 @@
-#VisEval_Metric_Viewer
+# VisEval_Metric_Viewer
 
 **REQUIRES (at least):** Matplotlib, Numpy, and NLTK >= 3.2.4 (see notes at the very end)
 
@@ -26,7 +26,7 @@ As well as the above there are also a number of optional flag arguments:
 
 -h, --help show this help message and exit
 
-###Required files:
+### Required files:
 
 -r REF, --ref REF the reference file to be used (required) 
 
@@ -35,7 +35,7 @@ As well as the above there are also a number of optional flag arguments:
 -hp HYP, --hyp HYP the hypothesis file to be used (required)
 
 
-###Optional Flags:
+### Optional Flags:
 -g, --graphs,flag to plot and draw graphs 
 
 -a, --advHist, show advanced histogram, (requires seaborn) 
@@ -50,7 +50,7 @@ As well as the above there are also a number of optional flag arguments:
 
 -x --extension, an extension name or tag given to the output directory, for better separation
 
-###Additional Metrics
+### Additional Metrics
 
 By default and at its most basic level **ViSEval** will only score using: NLTK BLEU, WER, and Edit Distance.
 
@@ -82,7 +82,7 @@ Three example files (SRC, REF, and HYP - containing 1000 sentences each) have be
 An additional HYP file has been included (nnPred.txt), which is a Neural Network translation of the src file.
 It displays, in general, a slightly better set of translations than the original HYP file)
 
-###RUNNING THE TOOL:
+### RUNNING THE TOOL:
 
 In order to run the tool as a test, then as a minimum the following must be completed:
 
@@ -110,7 +110,7 @@ The folder itself with a date stamp e.g. vm_scores_12-04-2018
 Inside the vm_scores folder should be: 
 
 
-###i) the main.html file, which is the entry point to the website
+### i) the main.html file, which is the entry point to the website
 
 ii) a scorePages folder (containing all the sentence pairs and scores from the input files) 
 
@@ -154,7 +154,7 @@ Currently the denominators have been multiplied by 1.0 or turned into floats, ra
 If you have any questions or feature requests then please feel free to contact me using: dbsteele1@sheffield.ac.uk
 Happy scoring :-)
 
-###TO DO:
+### TO DO:
 
 Add the config file option so all arguments for all metrics can be easily executed
 
