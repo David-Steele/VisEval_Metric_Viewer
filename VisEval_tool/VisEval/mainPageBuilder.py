@@ -40,7 +40,7 @@ try:
     parser.add_argument("-a", "--advHist", help="show advanced histogram, requires seaborn", action='store_true')
     parser.add_argument("-p", "--poly", help="show a linear line of best fit", action='store_true')
     parser.add_argument("-nb", "--numberOfBins", help="the scores will be split up into numberOfBins", default = 100, type=int)
-    parser.add_argument("-ob", "--orderBy", help="choose which metric to order by [bleu, mtbleu, mtnist, ter, wer, edit, met]", default = 'bleu')
+    parser.add_argument("-ob", "--orderBy", help="choose which metric to order by [bleu, mtbleu, mtnist, ter, wer, edit, met, beer]", default = 'bleu')
     parser.add_argument("-ca", "--colourAssist", help="removes colours that can be difficult to distinguish", action='store_true')
     parser.add_argument("-x", "--extension", help="extension name given to the output directory", default = '', type=str)
     ### START EXTRA SCORING METRICS ###

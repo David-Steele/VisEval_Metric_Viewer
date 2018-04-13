@@ -11,7 +11,7 @@ graphHead = """<!DOCTYPE html>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link rel="icon" href="../images/tabIconMini.png">
-        <title>VisMet</title>
+        <title>VisEval</title>
         
         <script type="text/javascript">
             function hideDiv(div1,div2)
@@ -52,7 +52,7 @@ head = """<!DOCTYPE html>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" href="images/tabIconMini.png">
-        <title>VisMet</title> 
+        <title>VisEval</title> 
     </head>
     <body>
         <div class="centre" id="centreOfBody">
@@ -115,7 +115,7 @@ scorepagesHead = """<!DOCTYPE html>
         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link rel="icon" href="../images/tabIconMini.png">
-        <title>VisMet</title>
+        <title>VisEval</title>
         <script data-require="jquery" data-semver="3.2.1" src="../jQuery/jquery-3.2.1.js"></script>
         <!--<script src="../jQuery/script.js"></script>-->
         
