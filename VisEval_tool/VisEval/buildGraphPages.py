@@ -351,7 +351,7 @@ def buildGraphPages(allStatsDict, hs, rw, mainDir, hasMet, hasTer, hasMtEval, ha
                     'Edit_Dist':[('Sen_Bleu',3),('MT_Bleu',10),('MT_NIST',11),('METEOR',8),('BEER',12),('TER',9),('WER',7)],
                     }
                    
-    from multiprocessing import Process
+    
 
     def f(name, idx,dirAffix):
         print ('Building the {0} graphs, please wait...'.format(name))
@@ -361,34 +361,69 @@ def buildGraphPages(allStatsDict, hs, rw, mainDir, hasMet, hasTer, hasMtEval, ha
         print(gsep)
         print ('Finished the {0} graphs...'.format(name))
         
-    sb = Process(target=f, args=('Sen_Bleu',3,'senBleuGraphs.html',)); sb.start()
-    
-    if hasMtEval:
-        mb = Process(target=f, args=('MT_Bleu',10,'mtBleuGraphs.html',)); mb.start()
-        mn = Process(target=f, args=('MT_NIST',11,'mtNistGraphs.html',)); mn.start()
-    if hasMet:
-        m = Process(target=f, args=('METEOR',8,'meteorGraphs.html',)); m.start()
-    if hasTer:
-        t = Process(target=f, args=('TER',9,'terGraphs.html',)); t.start()
-    
-    if hasBeer:
-        b = Process(target=f, args=('BEER',12,'beerGraphs.html',)); b.start()
+    def doGraphs():
         
-    w = Process(target=f, args=('WER',7,'werGraphs.html',)); w.start()
+        print('Drawing graphs in a single thread...')
+        
+        f('Sen_Bleu',3,'senBleuGraphs.html')
     
-    ed = Process(target=f, args=('Edit_Dist',4,'editGraphs.html',)); ed.start()
+        if hasMtEval:
+            f('MT_Bleu',10,'mtBleuGraphs.html')
+            f('MT_NIST',11,'mtNistGraphs.html')
+        if hasMet:
+            f('METEOR',8,'meteorGraphs.html')
+        if hasTer:
+            f('TER',9,'terGraphs.html')
+        
+        if hasBeer:
+            f('BEER',12,'beerGraphs.html')
+            
+        f('WER',7,'werGraphs.html')
+        
+        f('Edit_Dist',4,'editGraphs.html')
+        
+    try:
+        print('Trying Multiprocessing... please wait...')
+        
+        from multiprocessing import Process
+           
+        sb = Process(target=f, args=('Sen_Bleu',3,'senBleuGraphs.html',)); sb.start()
+        
+        if hasMtEval:
+            mb = Process(target=f, args=('MT_Bleu',10,'mtBleuGraphs.html',)); mb.start()
+            mn = Process(target=f, args=('MT_NIST',11,'mtNistGraphs.html',)); mn.start()
+        if hasMet:
+            m = Process(target=f, args=('METEOR',8,'meteorGraphs.html',)); m.start()
+        if hasTer:
+            t = Process(target=f, args=('TER',9,'terGraphs.html',)); t.start()
+        
+        if hasBeer:
+            b = Process(target=f, args=('BEER',12,'beerGraphs.html',)); b.start()
+            
+        w = Process(target=f, args=('WER',7,'werGraphs.html',)); w.start()
+        
+        ed = Process(target=f, args=('Edit_Dist',4,'editGraphs.html',)); ed.start()
+        
+        sb.join()
+        if hasMtEval:
+            mb.join(); mn.join()
+        if hasMet:
+            m.join()
+        if hasTer:
+            t.join()
+        if hasBeer:
+            b.join()
+        w.join()
+        ed.join()
+    except Exception as e:
+        print('General exception...')
+        print(type(e))
+        print(e)
+        print('~'*64)
+        print('There was a problem with multiprocessing, reverting back to a single thread...')
     
-    sb.join()
-    if hasMtEval:
-        mb.join(); mn.join()
-    if hasMet:
-        m.join()
-    if hasTer:
-        t.join()
-    if hasBeer:
-        b.join()
-    w.join()
-    ed.join()
+        doGraphs()
+        
     
     '''     
     rw.writeFile(buildGraphPageForScore(hs, 3, scoreLists, hasMet, hasTer, hasMtEval, mainDir, 'Sen_Bleu', combinations['Sen_Bleu']),

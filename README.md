@@ -92,11 +92,11 @@ Then do the following:
 
 i) **cd VisEval_Metric_Viewer/VisEval_tool/VisEval**
 
-ii) **python mainPageBuilder.py -r ref.en.txt -s src.zh.txt -hp hyp.txt**
+ii) **python mainPageBuilder.py -r test/ref.en.txt -s test/src.zh.txt -hp test/hyp.txt**
 
 OR (to see the Neural Network translation)
 
-iib) **python mainPageBuilder.py -r ref.en.txt -s src.zh.txt -hp nnPred.txt**
+iib) **python mainPageBuilder.py -r test/ref.en.txt -s test/src.zh.txt -hp test/nnPred.txt**
 
 
 If typed correctly, and with the minimum packages installed (Matlpotlib, NLTK (3.2.4) and Numpy), the process should run , which after a few seconds (2.8 on the test machine) should then generate the output.

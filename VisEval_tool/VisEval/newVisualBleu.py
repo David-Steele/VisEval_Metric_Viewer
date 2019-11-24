@@ -55,7 +55,15 @@ def generateBleuScores(inRef, inHyp):
                                     smoothing_function=sf.method4)
         except ZeroDivisionError as zde:
             print(zde)
-            
+        except Exception as e:
+            #print('General Exception')
+            #print(type(e))
+            #print(e)
+            if i%50 == 0:
+                print('Sentence',i,'Newer versions of NLTK set "emulate_multibleau=True" by default')
+            senBleu = bleu.sentence_bleu([refSen],hypSen,
+                                    auto_reweigh=True, 
+                                    smoothing_function=sf.method4)
         #edSenDist =-1
         bleuKey = int(math.ceil(senBleu*100))
         if bleuKey == 0:
@@ -67,9 +75,16 @@ def generateBleuScores(inRef, inHyp):
         allBleu.append([edDist, edSenDist, senBleu])
         #bleuDict[bleuKey].append([edDist, float(edSenDist), senBleu])
         #print(aList)
-    corpusBleu = bleu.corpus_bleu(refList,hypList,
-                                        emulate_multibleu=True)
-                
+    try:
+        corpusBleu = bleu.corpus_bleu(refList,hypList,
+                                            emulate_multibleu=True)
+    except Exception as e:
+        #print(type(e))
+        #print(e)
+        if i%50 == 0:
+            print('Sentence',i,'Newer versions of NLTK set "emulate_multibleau=True" by default')
+        corpusBleu = bleu.corpus_bleu(refList,hypList)
+        
     print('Standard Corpus Bleu = {0}'.format(corpusBleu))
     print(bleuSep)
     return allBleu, corpusBleu, totalEdSenDist
